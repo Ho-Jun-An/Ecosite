@@ -1,4 +1,85 @@
 .main-title {
     color: #707070;
-    font-family: 'Roboto', 'sans-serif';
+    font-family: 'Bahnschrift', 'sans-serif';
+}
+
+h1.main-title {
+    font-size: 50px;
+    position: absolute;
+    top: -20px;
+    left: 350px;
+}
+
+h2.main-title {
+    font-size: 50px;
+    position: absolute;
+    top: 40px;
+    left: 420px;
+}
+
+.nav-button-normal {
+    border-radius: 100%;
+    border: none;
+    font-family: 'Arial Rounded MT', sans-serif;
+    color: #707070;
+}
+
+.nav-text {
+    display:inline-block;
+    vertical-align:middle;
+    max-width: 90%;
+    font-size: 20px;
+}
+
+#ecoChatButtonTitle {
+    font-family: 'Bookman Old Style', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#ecoChatButtonSubtitle {
+    font-size: 15px;
+}
+
+#sustainabilityArticleButton {
+    width: 250px;
+    height: 250px;
+    background-color: #AAD4A2;
+}
+
+#searchButton {
+    width: 150px;
+    height: 150px;
+    background-color: #9FE7CA;
+}
+
+#fashionArticleButton {
+    width: 250px;
+    height: 250px;
+    background-color: #C6E7A0;
+}
+
+#ecoChatButton {
+    width: 200px;
+    height: 200px;
+    background-color: #D2E7C6;
+    border-style: solid;
+    border-width: 20px;
+    border-color: #67BDB1;
+}
+
+#aboutButton {
+    width: 250px;
+    height: 250px;
+    background-color: #B7D565;
+}
+
+#upcomingButton {
+    width: 165px;
+    height: 165px;
+    background-color: #7EC9A6;
+}
+
+.article-title {
+    font-family:cursive ;
 }
