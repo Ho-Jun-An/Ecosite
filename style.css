@@ -26,7 +26,7 @@ h2.main-title {
 
 .nav-text {
     display:inline-block;
-    vertical-align:middle;
+    vertical-align: middle;
     max-width: 90%;
     font-size: 20px;
 }
@@ -45,18 +45,27 @@ h2.main-title {
     width: 250px;
     height: 250px;
     background-color: #AAD4A2;
+    position: absolute;
+    top: 100px;
+    left: 80px;
 }
 
 #searchButton {
     width: 150px;
     height: 150px;
     background-color: #9FE7CA;
+    position: absolute;
+    top: 100px;
+    left: 900px;
 }
 
 #fashionArticleButton {
     width: 250px;
     height: 250px;
     background-color: #C6E7A0;
+    position: absolute;
+    top: 220px;
+    left: 650px;
 }
 
 #ecoChatButton {
@@ -66,20 +75,66 @@ h2.main-title {
     border-style: solid;
     border-width: 20px;
     border-color: #67BDB1;
+    position: absolute;
+    top: 180px;
+    left: 380px;
 }
 
 #aboutButton {
     width: 250px;
     height: 250px;
     background-color: #B7D565;
+    position: absolute;
+    top: 400px;
+    left: 230px;
 }
 
 #upcomingButton {
     width: 165px;
     height: 165px;
     background-color: #7EC9A6;
+    position: absolute;
+    top: 400px;
+    left: 900px;
+}
+
+.back-button {
+    font-family: 'Bookman Old Style', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    border-style: none;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+article {
+    display: flex;
+    justify-content: space-around;
+}
+
+.article-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .article-title {
-    font-family:cursive ;
+    font-size: 30px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    max-width: 700px;
+    flex-wrap: wrap;
+}
+
+.article-text {
+    font-size: 20px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    max-width: 700px;
+    flex-wrap: wrap;
 }
