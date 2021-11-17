@@ -140,7 +140,7 @@ h2.main-title {
     margin-right: 50px;
 }
 
-#ecoChat-title {
+#center-title {
     display: flex;
     justify-content: center;
     font-family: 'Bookman Old Style', sans-serif;
@@ -165,7 +165,7 @@ h2.main-title {
     border-radius: 100%;
     width: 50px;
     height: 50px;
-    margin-top: 50px;
+    margin-top: 25px;
     margin-bottom: 20px;
     margin-left: 40px;
     align-self: flex-start;
@@ -185,7 +185,7 @@ h2.main-title {
 .ecoChat-inputbox {
     padding: 10px;
     margin: 10px;
-    margin-top: 75px;
+    margin-top: 25px;
     width: 90%;
     background-color: #E1E1E1;
     border: none;
