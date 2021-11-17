@@ -1,13 +1,11 @@
 /* JS file for ecoChat bot */
 
+// Heartfelt thanks to Sylvia Pap for making this possible at:
+// https://dev.to/sylviapap/make-a-simple-chatbot-with-javascript-1gc
+
 // DOMContentLoaded runs only when HTML code has 
 // finished loading.
 // EventListener responds when a key is pressed.
-
-function closeWindow()
-{
-  window.top.close();
-}
 
 document.addEventListener("DOMContentLoaded", () => 
 {
@@ -164,24 +162,28 @@ function compare(triggerArray, replyArray, text)
 {
   let item;
 
+  const textSplit = text.split(" ");
   for (let x = 0; x < triggerArray.length; x++) 
   {
     for (let y = 0; y < triggerArray[x].length; y++) 
     {
-      var endPattern = new RegExp('(\\w*'+ triggerArray[x][y]+'\\w*)','gi')
-      if (text.match(endPattern)) 
+      for (let z = 0; z < textSplit.length; z++)
       {
-        if (triggerArray[x].length == replyArray[x].length)
+        if (triggerArray[x][y] == textSplit[z])
         {
-          item = replyArray[x][y];
-          break;
-        }
-        else
-        {
-          item = replyArray[x][0];
-          break;
+          if (triggerArray[x].length == replyArray[x].length)
+          {
+            item = replyArray[x][y];
+            break;
+          }
+          else
+          {
+            item = replyArray[x][0];
+            break;
+          }
         }
       }
+      
       
       // if (triggerArray[x][y] == text) 
       // {
