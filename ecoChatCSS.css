@@ -1,16 +1,17 @@
+/* CSS file for ecoChat bot */
+
+
 body { 
-    color: #421; 
+    /* color: #421;  */
     font-weight: bold; 
     font-size: 18px; 
     font-family: "Courier New"; 
-    background: rgb(200, 232, 241); 
+    /* background: rgb(200, 232, 241);  */
 
 
 }
 body::after {
     content: "";
-    background-image: url("bot.png");
-    background-repeat: repeat-y; 
     opacity: 0.5;
     top: 0;
     left: 0;
@@ -26,12 +27,12 @@ span {
     color: #711 
 }
 #main { 
-    position: fixed; 
-    top: 40%; 
-    right: 200px; 
-    width: 400px; 
-    border: 0px solid #421; 
-    padding: 40px; 
+    /* position: fixed;  */
+    padding-top: 5%; 
+    /* margin: auto;
+    width: 60%; */
+    text-align: center;
+
 }
 #main div { 
     margin: 10px; 
