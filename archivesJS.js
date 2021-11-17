@@ -6,16 +6,16 @@
 document.addEventListener("DOMContentLoaded", () => 
 {
   const resultsDiv = document.getElementById("archive-search-results");
-  let botDiv = document.createElement("div");
+  /*let botDiv = document.createElement("div");
   botDiv.id = "bot";
   let greeting = "Hi! Welcome to EcoChat. Ask me about unsustainable/ sustainable or (non-)environmentally friendly brands";
   botDiv.innerHTML = `Chatbot: <span id="bot-response">${greeting}</span>`;
   mainDiv.appendChild(botDiv);
-  // speak(product);
+  // speak(product);*/
 
 
   // Get input as inputField.
-  const inputField = document.getElementById("input")
+  const inputField = document.getElementById("search-article")
   // Detect keypresses for inputField.
   inputField.addEventListener("keydown", function(e) 
   {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () =>
     if (e.code === "Enter") 
     {
       // Get user input from <input> in EcoChat.html once Enter is pressed
-      let input = document.getElementById("input").value;
+      let input = document.getElementById("search-article").value;
 
       output(input); 
 
@@ -39,16 +39,6 @@ function output(input)
   // and digits.
   let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");
   
-  // Replaces everything on the left of the comma 
-  // inside the bracket .
-  text = text
-    .replace(/ a /g, " ")
-    .replace(/i feel /g, "")
-    .replace(/whats/g, "what is")
-    .replace(/please /g, "")
-    .replace(/ please/g, "");
-
-  
   if (compare(trigger, reply, text)) 
   {
     product = compare(trigger, reply, text);
@@ -60,7 +50,9 @@ function output(input)
       }
 
   //clear input value
-  document.getElementById("input").value = "";
+  document.getElementById("search-article").value = "";
+
+  window.location.href = "archive-search-results.html";
 
   // Updates DOM.
   addChat(input, product);
@@ -68,7 +60,7 @@ function output(input)
 
 function addChat(input, product) 
 {
-  const mainDiv = document.getElementById("main");
+  const mainDiv = document.getElementById("archive-search-results");
   let userDiv = document.createElement("div");
   userDiv.id = "user";
   userDiv.innerHTML = `You: <span id="user-response">${input}</span>`;
