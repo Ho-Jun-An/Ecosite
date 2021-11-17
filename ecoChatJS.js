@@ -183,12 +183,16 @@ function compare(triggerArray, replyArray, text)
     {
       if (triggerArray[x][y] == text) 
       {
+
         if (triggerArray[x].length == replyArray[x].length)
         {
           console.log(triggerArray[x][y] + " / " + replyArray[x][y]);
           item = replyArray[x][y];
           break;
         }
+    {
+      
+    }
       }
     }
   }
