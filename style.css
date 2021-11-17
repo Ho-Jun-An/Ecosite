@@ -7,14 +7,14 @@ h1.main-title {
     font-size: 50px;
     position: absolute;
     top: -20px;
-    left: 350px;
+    left: 250px;
 }
 
 h2.main-title {
     font-size: 50px;
     position: absolute;
     top: 40px;
-    left: 420px;
+    left: 320px;
 }
 
 .nav-button-normal {
@@ -41,31 +41,16 @@ h2.main-title {
     font-size: 15px;
 }
 
-#sustainabilityArticleButton {
-    width: 250px;
-    height: 250px;
-    background-color: #AAD4A2;
-    position: absolute;
-    top: 100px;
-    left: 80px;
-}
-
-#searchButton {
-    width: 150px;
-    height: 150px;
-    background-color: #9FE7CA;
-    position: absolute;
-    top: 100px;
-    left: 900px;
-}
-
-#fashionArticleButton {
-    width: 250px;
-    height: 250px;
+#articlesButton {
+    width: 230px;
+    height: 230px;
     background-color: #C6E7A0;
     position: absolute;
-    top: 220px;
-    left: 650px;
+    top: 150px;
+    left: 130px;
+    border-style: solid;
+    border-width: 20px;
+    border-color: #AAD4A2;
 }
 
 #ecoChatButton {
@@ -76,26 +61,29 @@ h2.main-title {
     border-width: 20px;
     border-color: #67BDB1;
     position: absolute;
-    top: 180px;
-    left: 380px;
+    top: 200px;
+    left: 400px;
 }
 
 #aboutButton {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     background-color: #B7D565;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #a6bd66;
     position: absolute;
     top: 400px;
-    left: 230px;
+    left: 200px;
 }
 
-#upcomingButton {
-    width: 165px;
-    height: 165px;
-    background-color: #7EC9A6;
+.placeholder-image {
+    width: 40%;
+    height: 500;
     position: absolute;
-    top: 400px;
-    left: 900px;
+    top: 75px;
+    left: 700px;
+
 }
 
 .back-button {
@@ -107,37 +95,6 @@ h2.main-title {
     position: absolute;
     top: 10px;
     left: 20px;
-}
-
-.article-content-main {
-    display: flex;
-    justify-content: center;
-}
-
-.article-content {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-left: 50px;
-}
-
-.article-title {
-    font-size: 30px;
-    font-family: 'Arial Rounded MT', sans-serif;
-    width: 80%;
-}
-
-.article-text {
-    font-size: 20px;
-    font-family: 'Arial Rounded MT', sans-serif;
-    width: 80%;
-    margin-right: 10px;
-}
-
-.article-image {
-    max-height: 500px;
-    margin-top: 50px;
-    margin-right: 50px;
 }
 
 #center-title {
@@ -190,4 +147,111 @@ h2.main-title {
     width: 90%;
     background-color: #E1E1E1;
     border: none;
+    outline: none;
+}
+
+#articlesOfTheMonth-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#articlesOfTheMonth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #9AC8C2;
+    padding: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border-style: solid;
+    border-width: 15px;
+    border-color: #AAD4A2;
+}
+
+.articleList-article {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: #C6E7A0;
+    padding: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    margin: 10px;
+    width: 90%;
+}
+
+.articleList-name {
+    font-family: 'Bookman Old Style', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.articleList-author {
+    color: rgb(63, 63, 63);
+}
+
+.articleList-date {
+    color: rgb(63, 63, 63);
+}
+
+#archivesButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#archivesButton {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    background-color: #a8a8a8;
+    padding: 8px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(109, 109, 109);
+    margin: 20px;
+    width: 40%;
+}
+
+.archives-search-container {
+    display: flex;
+    justify-content: center;
+}
+
+.archives-search {
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    background-color: #9FE7CA;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #70af96;
+    outline: none;
+}
+
+.article-archives-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.general-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.general-title {
+    font-size: 30px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    width: 80%;
+}
+
+.general-text {
+    font-size: 20px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    width: 80%;
+    margin-right: 10px;
 }

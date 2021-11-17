@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Arcives</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="http://fonts.cdnfonts.com/css/bookman-old-style" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<script>
+    function goBack() {
+      window.history.back();
+    }
+</script>
+
+<body style="background-color: #fdffd8">
+    <h1 id="center-title">
+        Search Results
+    </h1>
+
+    <nav id="archive-search-results" class="article-archives-list">
+        <button class="articleList-article" onclick="window.location.href='#'">
+            <span class="articleList-name">No Article</span> <br>
+            <span class="articleList-author">No Author</span> <br>
+            <span class="articleList-date">No Date</span>
+        </button>
+    </nav>
+    
+    <button class="back-button" onclick="goBack()">&#60;</button>
+</body>
+</html>
