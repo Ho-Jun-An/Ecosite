@@ -109,34 +109,36 @@ h2.main-title {
     left: 20px;
 }
 
-article {
+.article-content-main {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .article-content {
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
+    margin-left: 50px;
 }
 
 .article-title {
     font-size: 30px;
     font-family: 'Arial Rounded MT', sans-serif;
-    position: relative;
-    top: 50px;
-    left: 50px;
-    max-width: 700px;
-    flex-wrap: wrap;
+    width: 70%;
 }
 
 .article-text {
     font-size: 20px;
     font-family: 'Arial Rounded MT', sans-serif;
-    position: relative;
-    top: 50px;
-    left: 50px;
-    max-width: 650px;
-    flex-wrap: wrap;
+    height: 500px;
+    width: 80%;
+    margin-right: 10px;
+}
+
+.article-image {
+    max-height: 500px;
+    margin-top: 50px;
+    margin-right: 50px;
 }
 
 #ecoChat-title {
@@ -160,7 +162,7 @@ article {
 
 #ecoChat-icon {
     padding: 10px;
-    background-color: #ACACAC;
+    background-color: #4e4e4e;
     border-radius: 100%;
     width: 50px;
     height: 50px;
