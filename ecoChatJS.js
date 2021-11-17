@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () =>
   const mainDiv = document.getElementById("main");
   let botDiv = document.createElement("div");
   botDiv.id = "bot";
-  let greeting = "Hi! Welcome to EcoChat. What would you like to know today?";
+  let greeting = "Hi! Welcome to EcoChat. Ask me about unsustainable/ sustainable or (non-)environmentally friendly brands";
   botDiv.innerHTML = `Chatbot: <span id="bot-response">${greeting}</span>`;
   mainDiv.appendChild(botDiv);
   // speak(product);
@@ -28,10 +28,6 @@ document.addEventListener("DOMContentLoaded", () =>
       output(input); 
 
       // output(input);
-    }
-    if (e.code === "Control" + "W")
-    {
-      alert("Thank you!")
     }
   });
 });
@@ -55,7 +51,6 @@ function output(input)
   
   if (compare(trigger, reply, text)) 
   {
-    console.log("text =", text);
     product = compare(trigger, reply, text);
   } else 
       {
@@ -83,83 +78,84 @@ function addChat(input, product)
   botDiv.id = "bot";
   botDiv.innerHTML = `Chatbot: <span id="bot-response">${product}</span>`;
   mainDiv.appendChild(botDiv);
-  speak(product);
+  //speak(product);
 }
 
 // If the word or phrase is in the double quotes, 
 // do something.
 const trigger = 
-[
-  //0 
-  ["hi", "hey", "hello"],
+[ 
+  ["unsustainable"],  
   
-  //1
-  ["how are you", "how are things"],
+  ["non-environmentally friendly"],
+
+  ["shein"], 
+
+  ["victorias secret"], 
+
+  ["mango"],
+
+  // ["sustainable"],
   
-  //2
-  ["what is going on", "what is up"],
-  
-  //3
-  ["happy", "good", "well", "fantastic", "cool"],
-  
-  //4
-  ["bad", "bored", "tired", "sad"],
-  
-  //5
-  ["tell me story", "tell me joke"],
-  
-  //6
-  ["thanks", "thank you"],
-  
-  //7
-  ["bye", "good bye", "goodbye"],
-  
-  //8
-  ["unsustainable", "non-environmentally friendly"]
+  // ["eco friendly"],
+
+  // ["environmentally friendly"],
+
+  // ["alternative choices"],
+
+  ["1", "2"],
+
+  ["xiaomi, samsung"]
+
 ];
 
 // That something would be to reply with the word or phrase
 // inside the double quotes.
 const reply = 
 [
-  //0 
-  ["Hello!", "Hi!", "Hey!", "Hi there!"], 
-  
-  //1
-  [
-    "Fine... how are you?",
-    "Pretty well, how are you?",
-    "Fantastic, how are you?"
-  ],
-  
-  //2
-  [
-    "Nothing much",
-    "Exciting things!"
-  ],
-  
-  //3
-  ["Glad to hear it"],
-  
-  //4
-  ["Why?", "Cheer up buddy"],
-  
-  //5
-  ["What about?", "Once upon a time..."],
-  
-  //6
-  ["You're welcome", "No problem"],
-  
-  //7
-  ["Goodbye", "See you later"],
+  ["Here are some unsustainable brands:" + 
+  "<ul>" +
+    "<li>" +
+      "Shein" +
+    "</li>" +
+    "<li>" +
+      "Victoria\'s Secret" +
+    "</li>" +
+    "<li>" +
+      "Mango" +
+    "</li>" +
+  "</ul>" +
+  "<br> Pick one to know why."],
 
-  //8
-  ["Here are some unsustainable brands: <br> •Shein <br> •Victoria\'s Secret <br> •Mango <br> Pick one to know why."]
+  ["Here are some unsustainable brands:" + 
+  "<ul>" +
+    "<li>" +
+      "Shein" +
+    "</li>" +
+    "<li>" +
+      "Victoria\'s Secret" +
+    "</li>" +
+    "<li>" +
+      "Mango" +
+    "</li>" +
+  "</ul>" +
+  "<br> Pick one to know why."],
+
+  ["Shein: <br> Although Shein has a social responsibility website to show the company\'s commitments to giving back to society. There have been no forms of third-party certification to verify that Shein has been genuinely contributing to becoming more sustainable environmentally and in other aspects. <br> Shein has been shown to sell their clothes at relatively lower prices compared to other fashion companies and has a fast turnaround time due to their transportation of their goods via airplanes which consumes large amount of fossil fuels, thus having a larger carbon footprint. In addition, there is no evidence to show that Shein pays their factory workers a proper wage which allows the company to operate with low overhead costs. This allows for the company to sell their products at such low prices.<br> <a href = 'https://www.greenmatters.com/p/is-shein-bad'> Find out more here. </a>"],
+ 
+  ["Victoria\'s Secret: <br> Victoria\'s Secret has little eco-friendly materials in its collection. It has also signed up with Greeenpeace\'s “Detox My Fashion” program back in 2011 which set a deadline to eliminate hazardous chemicals by 2020 from their products. <br> However, the company has not produced any evidence of their progress towards their set goal. The brand has received 21%-30% in the Fashion Transparency Index, thus making them less trustworthy. With the onset of the COVID-19 pandemic, Victoria\'s Secret has shown the lack of policies in protecting suppliers and workers in it supply chain from the impacts of the pandemic. <br> <a href = 'https://goodonyou.eco/how-ethical-is-victorias-secret/'> Find out more here. </a>"],
+
+  ["Mango: <br> The company although disclosing the number of its factories\' greenhouse gas emissions, it has yet to set a target to lower them and have yet to have a plan on how to cut down on such emissions. Mango\'s Code of Conduct has also shown that it only pays their workers the legal minimum wage and not the recommended wages. <br> <a href = 'https://www.independent.co.uk/news/uk/home-news/which-british-high-street-shops-do-not-pay-their-garment-workers-living-wage-9223733.html'> Find out more here. </a> <br> <a href = 'https://www.sustainably-chic.com/blog/fast-fashion-brands-to-avoid'> and here. </a>"],
+
+  ["1", "2"],
+
+  ["Android"]
+  
 ];
 
 // If the bot didn't use any of the triggers, it can use
 // these instead.
-const alternative = 
+alternative = 
 [
   "I'm sorry?",
   "I didn't catch that.",
@@ -170,25 +166,32 @@ const alternative =
 
 function compare(triggerArray, replyArray, text) 
 {
-  // Create variable "item".
   let item;
-  // While x = 0 and less than the length of triggerArray,
-  // add 1 to it and... 
+
+  // for (let a = 0; a < triggerArray.length; a++)
+  // {
+  //   if (triggerArray[a] == text)
+  //   {
+  //     item = replyArray[a];
+  //     return item;
+  //   }
+  // }
+
   for (let x = 0; x < triggerArray.length; x++) 
   {
-    // ...while y = 0 and less than the length 
-    // of replyArray, add 1 to it and... 
-    for (let y = 0; y < triggerArray.length; y++) 
+    for (let y = 0; y < triggerArray[x].length; y++) 
     {
-      // ... check if anything in triggerArray[x][y] matches 
-      // the user input, if so, assign replyArray[x] to items
-      // and choose a random phrase in replyArray[x] to return
-      if (text in triggerArray[x][y]) 
+      if (triggerArray[x][y] == text) 
       {
-        items = replyArray[x];
-        item = items[Math.floor(Math.random() * items.length)];
+        if (triggerArray[x].length == replyArray[x].length)
+        {
+          console.log(triggerArray[x][y] + " / " + replyArray[x][y]);
+          item = replyArray[x][y];
+          break;
+        }
       }
     }
   }
+
   return item;
 }
