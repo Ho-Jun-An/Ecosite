@@ -118,7 +118,6 @@ const trigger =
   ["unsustainable", "non-environmentally friendly"]
 ];
 
-
 // That something would be to reply with the word or phrase
 // inside the double quotes.
 const reply = 
@@ -155,7 +154,7 @@ const reply =
   ["Goodbye", "See you later"],
 
   //8
-  ["Here are some unsustainable brands: Shein\nVictoria’s Secret\nMango\nPick one to know why."]
+  ["Here are some unsustainable brands: <br> •Shein <br> •Victoria\'s Secret <br> •Mango <br> Pick one to know why."]
 ];
 
 // If the bot didn't use any of the triggers, it can use
@@ -179,12 +178,12 @@ function compare(triggerArray, replyArray, text)
   {
     // ...while y = 0 and less than the length 
     // of replyArray, add 1 to it and... 
-    for (let y = 0; y < replyArray.length; y++) 
+    for (let y = 0; y < triggerArray.length; y++) 
     {
       // ... check if anything in triggerArray[x][y] matches 
       // the user input, if so, assign replyArray[x] to items
       // and choose a random phrase in replyArray[x] to return
-      if (triggerArray[x][y] == text) 
+      if (text in triggerArray[x][y]) 
       {
         items = replyArray[x];
         item = items[Math.floor(Math.random() * items.length)];

@@ -24,12 +24,9 @@ span {
     /* margin: auto;
     width: 60%; */
     text-align: center;
+    padding: 5%;
 
 }
-
-#main div { 
-    margin: 10px; 
-} 
 
 #input { 
     border: 0; 
