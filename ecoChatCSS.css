@@ -1,15 +1,5 @@
 /* CSS file for ecoChat bot */
 
-
-body { 
-    /* color: #421;  */
-    font-weight: bold; 
-    font-size: 18px; 
-    font-family: "Courier New"; 
-    /* background: rgb(200, 232, 241);  */
-
-
-}
 body::after {
     content: "";
     opacity: 0.5;
@@ -19,24 +9,28 @@ body::after {
     right: 0;
     position: absolute;
     z-index: -1;   
-  }
+}
+
 span { 
     color: rgb(36, 17, 119); 
 } 
+
 ::-webkit-input-placeholder { 
     color: #711 
 }
-#main { 
-    /* position: fixed;  */
+
+#main {
     padding-top: 5%; 
     /* margin: auto;
     width: 60%; */
     text-align: center;
 
 }
+
 #main div { 
     margin: 10px; 
 } 
+
 #input { 
     border: 0; 
     padding: 5px; 

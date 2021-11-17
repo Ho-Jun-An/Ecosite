@@ -5,24 +5,25 @@
 <head>
     <title>ecoChat</title>
     <script type="text/javascript" src="ecoChatJS.js"></script>
-    <link rel="stylesheet" href="ecoChatCSS.css" />
+    <link rel="stylesheet" href="style.css">
 
     <link href="http://fonts.cdnfonts.com/css/arial-rounded-mt" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/bookman-old-style" rel="stylesheet">
 </head>
+
 <body style="background-color: #fdffd8">
-    <div id="main">
-        <div><input id="input" type="text" placeholder="Say something..." autocomplete="off" /></div>
-    </div>
+    <h1 id="ecoChat-title">
+        EcoChat
+    </h1>
+
+    <section id="ecoChat-box">
+        <div id="main" class="ecoChat-textbox">
+            
+        </div>
+        <input id="input" class="ecoChat-inputbox" type="text" placeholder="Say something..." autocomplete="off" />
+    </section>
+
+    <button class="back-button" onclick="window.location.href='index.html'">&#60;</button>
 </body>
+
 </html>
-
-<h1>
-    ecoChat
-</h1>
-
-<p>
-    Text
-</p>
-
-<button class="back-button" onclick="window.location.href='index.html'">&#60;</button>

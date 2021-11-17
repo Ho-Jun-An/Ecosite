@@ -138,3 +138,37 @@ article {
     max-width: 650px;
     flex-wrap: wrap;
 }
+
+#ecoChat-title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Bookman Old Style', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: #707070;
+}
+
+#ecoChat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #9AC8C2;
+    padding: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.ecoChat-textbox {
+    padding: 10px;
+    background-color: #E1E1E1;
+}
+
+.ecoChat-inputbox {
+    padding: 10px;
+    margin: 10px;
+    margin-top: 100px;
+    width: 1000px;
+    min-width: 500px;
+    background-color: #E1E1E1;
+    border: none;
+}

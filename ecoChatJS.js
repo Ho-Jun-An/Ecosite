@@ -112,7 +112,7 @@ const trigger =
   ["thanks", "thank you"],
   
   //7
-  ["bye", "good bye", "goodbye"]
+  ["bye", "good bye", "goodbye"],
   
   //8
   ["unsustainable", "non-environmentally friendly"]
@@ -152,7 +152,7 @@ const reply =
   ["You're welcome", "No problem"],
   
   //7
-  ["Goodbye", "See you later"]
+  ["Goodbye", "See you later"],
 
   //8
   ["Here are some unsustainable brands: Shein\nVictoria’s Secret\nMango\nPick one to know why."]
