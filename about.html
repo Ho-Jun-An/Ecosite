@@ -12,6 +12,12 @@
     <link href="http://fonts.cdnfonts.com/css/bookman-old-style" rel="stylesheet">
 </head>
 
+<script>
+    function goBack() {
+      window.history.back();
+    }
+</script>
+
 <body style="background-color: #fdffd8">
     <section class="general-content">
         <h1 class="general-title">
@@ -40,7 +46,7 @@
         </p>
     </section>
     
-    <button class="back-button" onclick="window.location.href='index.html'">&#60;</button>
+    <button class="back-button" onclick="goBack()">&#60;</button>
 </body>
 
 </html>

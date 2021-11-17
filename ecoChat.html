@@ -11,6 +11,12 @@
     <link href="http://fonts.cdnfonts.com/css/bookman-old-style" rel="stylesheet">
 </head>
 
+<script>
+    function goBack() {
+      window.history.back();
+    }
+</script>
+
 <body style="background-color: #fdffd8">
     <h1 id="center-title">
         EcoChat
@@ -24,7 +30,7 @@
         <input id="input" class="ecoChat-inputbox" type="text" placeholder="Say something..." autocomplete="off" />
     </section>
 
-    <button class="back-button" onclick="window.location.href='index.html'">&#60;</button>
+    <button class="back-button" onclick="goBack()">&#60;</button>
 </body>
 
 </html>
