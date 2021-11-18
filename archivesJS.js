@@ -67,9 +67,9 @@ function displayResults(product)
 // do something.
 const trigger = 
 [ 
-  ["sustainability", "in", "our", "generation", "why", "is", "it", "important"],  
+  ["sustainability", "in", "our", "generation", "why", "is", "it", "important", "ethan", "han", "17", "seventeen", "november", "nov", "2021"],  
   
-  ["fast", "fashion", "an", "epidemic"]
+  ["fast", "fashion", "an", "epidemic", "rajeshkanna", "thaanya", "17", "seventeen", "november", "nov", "2021"]
 ];
 
 // That something would be to reply with the word or phrase
@@ -78,13 +78,13 @@ const reply =
 [
   "<button class=\"articleList-article\" onclick=\"window.location.href='articles/sustainabilityInOurGeneration.html'\">" +
    "<span class=\"articleList-name\">Sustainability in our generation: why is it important?</span> <br>" +
-   "<span class=\"articleList-author\">By Author</span> <br>" +
+   "<span class=\"articleList-author\">By Ethan Han</span> <br>" +
    "<span class=\"articleList-date\">17th November 2021</span>" +
    "</button>",
 
   "<button class=\"articleList-article\" onclick=\"window.location.href='articles/fastFashionAnEpidemic.html'\">" +
    "<span class=\"articleList-name\">Fast Fashion: an epidemic</span> <br>" +
-   "<span class=\"articleList-author\">By Author</span> <br>" +
+   "<span class=\"articleList-author\">By Rajeshkanna Thaanya</span> <br>" +
    "<span class=\"articleList-date\">17th November 2021</span>" +
    "</button>"
 ];
