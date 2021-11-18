@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article Arcives</title>
+    <script type="text/javascript" src="archivesJS.js"></script>
     <link rel="stylesheet" href="style.css">
 
     <link href="http://fonts.cdnfonts.com/css/bookman-old-style" rel="stylesheet">
@@ -22,9 +23,18 @@
         Article Archives
     </h1>
 
-    <div class="archives-search-container">
+    <section id="archive-search-results">
         <input id="search-article" class="archives-search" type="text" placeholder="Search for article..." autocomplete="off" />
-    </div>
+
+        <h1 id="search-results-title">
+            Search Results
+        </h1>
+
+        <button class="articleList-article">
+            <span class="articleList-name">No Results</span> <br>
+        </button>
+        
+    </section>
 
     <nav class="article-archives-list">
         <button class="articleList-article" onclick="window.location.href='#'">

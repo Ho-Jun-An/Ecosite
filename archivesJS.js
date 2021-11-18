@@ -6,16 +6,8 @@
 document.addEventListener("DOMContentLoaded", () => 
 {
   const resultsDiv = document.getElementById("archive-search-results");
-  /*let botDiv = document.createElement("div");
-  botDiv.id = "bot";
-  let greeting = "Hi! Welcome to EcoChat. Ask me about unsustainable/ sustainable or (non-)environmentally friendly brands";
-  botDiv.innerHTML = `Chatbot: <span id="bot-response">${greeting}</span>`;
-  mainDiv.appendChild(botDiv);
-  // speak(product);*/
+  const inputField = document.getElementById("search-article");
 
-
-  // Get input as inputField.
-  const inputField = document.getElementById("search-article")
   // Detect keypresses for inputField.
   inputField.addEventListener("keydown", function(e) 
   {
@@ -25,9 +17,10 @@ document.addEventListener("DOMContentLoaded", () =>
       // Get user input from <input> in EcoChat.html once Enter is pressed
       let input = document.getElementById("search-article").value;
 
-      output(input); 
+      // Clear results box (This includes search bar and title)
+      resultsDiv.innerHTML = "";
 
-      // output(input);
+      output(input);
     }
   });
 });
@@ -38,36 +31,31 @@ function output(input)
   // Removes everything but word charaters, whitespaces 
   // and digits.
   let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");
-  textWords = text.split(" ")
+  const textWords = text.split(" ");
   
-  if (compare(trigger, reply, text)) 
-  {
-    product = compare(trigger, reply, text);
-  } else 
-      {
-      // Come up with a random phrase within that group.
-      product = alternative[Math.floor(Math.random() * 
-        alternative.length)];
-      }
+  if (compare(trigger, reply, textWords) == []) {
+    // Display no results box
+    product = alternative;
+  }
+  else {
+    product = compare(trigger, reply, textWords);
+  }
 
-  //clear input value
-  document.getElementById("search-article").value = "";
-
-  window.location.href = "archive-search-results.html";
-
-  // Updates DOM.
+  // Displays results.
   displayResults(product);
 }
 
 function displayResults(product) 
 {
-  const resultsDiv = document.getElementById("archive-search-results");
+  //const resultsDiv = document.getElementById("archive-search-results");
 
-  let botDiv = document.createElement("div");
-  botDiv.id = "bot";
-  botDiv.innerHTML = `Chatbot: <span id="bot-response">${product}</span>`;
-  resultsDiv.appendChild(botDiv);
-  //speak(product);
+  // Display search bar and title
+  document.getElementById("archive-search-results").innerHTML = "<input id=\"search-article\" class=\"archives-search\" type=\"text\" placeholder=\"Search for article...\" autocomplete=\"off\" />"
+
+  // Display articles
+  /*for (articleResult in product) {
+    resultsDiv.appendChild(articleDiv);
+  }*/
 }
 
 // If the word or phrase is in the double quotes, 
@@ -107,29 +95,32 @@ alternative =
   "</button>"
 ];
 
-function compare(triggerArray, replyArray, text) 
+function compare(triggerArray, replyArray, textWords) 
 {
-  let item;
+  const results = [];
 
-  for (let x = 0; x < triggerArray.length; x++) 
-  {
-    for (let y = 0; y < triggerArray[x].length; y++) 
-    {
-      var endPattern = new RegExp('(\\w*'+ triggerArray[x][y]+'\\w*)','gi')
-      if (text.match(endPattern)) 
-      {
-        if (triggerArray[x].length == replyArray[x].length)
-        {
-          item = replyArray[x][y];
-          break;
-        }
-        else
-        {
-          item = replyArray[x][0];
-          break;
+  for (word in textWords) {
+    for (let x = 0; x < triggerArray.length; x++) {
+      for (let y = 0; y < triggerArray[x].length; y++) {
+        if (triggerArray[x][y] == word) {
+          let status = 0;
+
+          for (searchResult in results) {
+            if (searchResult = replyArray[x]) {
+              status = 1;
+            }
+          }
+
+          if (status == 1) {
+            break;
+          }
+          else {
+            results.push(replyArray[x])
+          }
         }
       }
     }
   }
-  return item;
+
+  return results;
 }
