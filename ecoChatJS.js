@@ -155,7 +155,8 @@ alternative =
   "Please try again",
   "Come again?",
   "I couldn't quite understand your query.",
-  "I hate programming this stupid bot."
+  "I hate programming this stupid bot.",
+  "We’re sorry, we can’t help you with that. You can post the question in the forum and await a reply!"
 ];
 
 function compare(triggerArray, replyArray, text) 
