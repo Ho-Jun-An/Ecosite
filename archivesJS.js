@@ -5,7 +5,7 @@
 // EventListener responds when a key is pressed.
 document.addEventListener("DOMContentLoaded", () => 
 {
-  const resultsDiv = document.getElementById("archive-search-results");
+  const resultsDiv = document.getElementById("archive-results-container");
   const inputField = document.getElementById("search-article");
 
   // Detect keypresses for inputField.
@@ -14,11 +14,14 @@ document.addEventListener("DOMContentLoaded", () =>
     // In this case, it would be the Enter key.
     if (e.code === "Enter") 
     {
+      // Clear results box (This includes title)
+      resultsDiv.innerHTML = "";
+
       // Get user input from <input> in EcoChat.html once Enter is pressed
       let input = document.getElementById("search-article").value;
 
-      // Clear results box (This includes search bar and title)
-      resultsDiv.innerHTML = "";
+      //clear input value
+      document.getElementById("search-article").value = "";
 
       output(input);
     }
@@ -27,18 +30,18 @@ document.addEventListener("DOMContentLoaded", () =>
 
 function output(input) 
 {
-  let product;
+  let product = [];
   // Removes everything but word charaters, whitespaces 
   // and digits.
   let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");
   const textWords = text.split(" ");
   
-  if (compare(trigger, reply, textWords) == []) {
-    // Display no results box
-    product = alternative;
-  }
-  else {
-    product = compare(trigger, reply, textWords);
+searchResults = compare(trigger, reply, textWords);
+
+  if (searchResults.length == 0) {
+    product = noResults;
+  } else {
+    product = searchResults;
   }
 
   // Displays results.
@@ -47,66 +50,62 @@ function output(input)
 
 function displayResults(product) 
 {
-  //const resultsDiv = document.getElementById("archive-search-results");
+  const resultsDiv = document.getElementById("archive-results-container");
 
-  // Display search bar and title
-  document.getElementById("archive-search-results").innerHTML = "<input id=\"search-article\" class=\"archives-search\" type=\"text\" placeholder=\"Search for article...\" autocomplete=\"off\" />"
+  // Display search bar, title and archive-results-container
+  document.getElementById("archive-results-container").innerHTML = "<h1 id=\"search-results-title\">Search Results</h1>"
 
   // Display articles
-  /*for (articleResult in product) {
-    resultsDiv.appendChild(articleDiv);
-  }*/
+  for (a = 0; a < product.length; a++) {
+    var tempDiv = document.createElement('div');
+    tempDiv.innerHTML = product[a];
+    resultsDiv.appendChild(tempDiv.firstChild);
+  }
 }
 
 // If the word or phrase is in the double quotes, 
 // do something.
 const trigger = 
 [ 
-  ["Sustainability", "in", "our", "generation", "why", "is", "it", "important"],  
+  ["sustainability", "in", "our", "generation", "why", "is", "it", "important"],  
   
-  ["Fast", "Fashion", "an", "epidemic"]
-
+  ["fast", "fashion", "an", "epidemic"]
 ];
 
 // That something would be to reply with the word or phrase
 // inside the double quotes.
 const reply = 
 [
-  ["<button class=\"articleList-article\" onclick=\"window.location.href='articles/sustainabilityInOurGeneration.html'\">" +
+  "<button class=\"articleList-article\" onclick=\"window.location.href='articles/sustainabilityInOurGeneration.html'\">" +
    "<span class=\"articleList-name\">Sustainability in our generation: why is it important?</span> <br>" +
    "<span class=\"articleList-author\">By Author</span> <br>" +
    "<span class=\"articleList-date\">17th November 2021</span>" +
-   "</button>"],
+   "</button>",
 
-  ["<button class=\"articleList-article\" onclick=\"window.location.href='articles/fastFashionAnEpidemic.html'\">" +
+  "<button class=\"articleList-article\" onclick=\"window.location.href='articles/fastFashionAnEpidemic.html'\">" +
    "<span class=\"articleList-name\">Fast Fashion: an epidemic</span> <br>" +
    "<span class=\"articleList-author\">By Author</span> <br>" +
    "<span class=\"articleList-date\">17th November 2021</span>" +
-   "</button>"]
-
+   "</button>"
 ];
 
-// If the bot didn't use any of the triggers, it can use
-// these instead.
-alternative = 
-[
-  "<button class=\"articleList-article\">" +
-  "<span class=\"articleList-name\">No Results</span> <br>" +
-  "</button>"
-];
+const noResults = ["<button class=\"articleList-article\"> <span class=\"articleList-name\">No Results</span> <br> </button>"]
 
 function compare(triggerArray, replyArray, textWords) 
 {
   const results = [];
 
-  for (word in textWords) {
+  for (let w = 0; w < textWords.length; w++) {
     for (let x = 0; x < triggerArray.length; x++) {
       for (let y = 0; y < triggerArray[x].length; y++) {
-        if (triggerArray[x][y] == word) {
+        let checkWord = triggerArray[x][y];
+        let word = textWords[w];
+
+        if (checkWord == word) {
           let status = 0;
 
-          for (searchResult in results) {
-            if (searchResult = replyArray[x]) {
+          for (let r = 0; r < results.length; r++) {
+            if (results[r] == replyArray[x]) {
               status = 1;
             }
           }
