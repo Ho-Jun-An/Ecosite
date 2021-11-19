@@ -77,13 +77,26 @@ h2.main-title {
     left: 200px;
 }
 
-.placeholder-image {
+#contact-title {
+    font-family: 'Bookman Old Style', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: #707070;
+    margin-top: 50px;
+    margin-left: 760px;
+}
+
+.contact-text {
+    font-family: 'Bookman Old Style', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 820px;
+}
+
+#instagram-image {
     width: 40%;
     height: 500;
-    position: absolute;
-    top: 75px;
-    left: 700px;
-
+    margin-left: 700px;
 }
 
 .back-button {
@@ -136,7 +149,7 @@ h2.main-title {
     background-color: #E1E1E1;
     padding: 10px;
     margin-left: 40px;
-    height: 250px;
+    height: 500px;
     border-radius: 20px;
 }
 
