@@ -69,7 +69,9 @@ const trigger =
 [ 
   ["sustainability", "in", "our", "generation", "why", "is", "it", "important", "ethan", "han", "17", "seventeen", "november", "nov", "2021"],  
   
-  ["fast", "fashion", "an", "epidemic", "rajeshkanna", "thaanya", "17", "seventeen", "november", "nov", "2021"]
+  ["fast", "fashion", "an", "epidemic", "rajeshkanna", "thaanya", "17", "seventeen", "november", "nov", "2021"],
+
+  ["inside", "a", "denim", "factory", "in", "nairobi", "in", "pictures", "baz", "ratner", "19", "nineteen", "november", "nov", "2021"]
 ];
 
 // That something would be to reply with the word or phrase
@@ -86,6 +88,12 @@ const reply =
    "<span class=\"articleList-name\">Fast Fashion: an epidemic</span> <br>" +
    "<span class=\"articleList-author\">By Rajeshkanna Thaanya</span> <br>" +
    "<span class=\"articleList-date\">17th November 2021</span>" +
+   "</button>",
+
+  "<button class=\"articleList-article external-article\" onclick=\"window.location.href='https\://www.theguardian.com/fashion/gallery/2017/apr/26/inside-denim-factory-nairobi-kenya-in-pictures'\">" +
+   "<span class=\"articleList-name\">Inside a Denim Factory in Nairobi - in Pictures</span> <br>" +
+   "<span class=\"articleList-author\">By Baz Ratner</span> <br>" +
+   "<span class=\"articleList-date\">19th November 2021</span>" +
    "</button>"
 ];
 

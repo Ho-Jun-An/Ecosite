@@ -83,7 +83,7 @@ h2.main-title {
     font-size: 50px;
     color: #707070;
     margin-top: 50px;
-    margin-left: 760px;
+    margin-left: 820px;
 }
 
 .contact-text {
@@ -192,6 +192,11 @@ h2.main-title {
     border-color: black;
     margin: 10px;
     width: 90%;
+}
+
+.external-article {
+    background-color: #bebebe;
+    border-color: rgb(71, 71, 71);
 }
 
 .articleList-name {
