@@ -125,8 +125,8 @@ h2.main-title {
     align-items: center;
     background-color: #9AC8C2;
     padding: 10px;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin: auto;
+    width: 90%;
 }
 
 #ecoChat-icon {
@@ -136,8 +136,8 @@ h2.main-title {
     width: 50px;
     height: 50px;
     margin-top: 25px;
-    margin-bottom: 20px;
-    margin-left: 40px;
+    /* margin-bottom: 20px; */
+    /* margin-left: 20px; */
     align-self: flex-start;
 }
 
@@ -145,19 +145,20 @@ h2.main-title {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    width: 90%;
     background-color: #E1E1E1;
     padding: 10px;
-    margin-left: 40px;
     height: 500px;
     border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 95%;
 }
 
 .ecoChat-inputbox {
     padding: 10px;
-    margin: 10px;
-    margin-top: 25px;
-    width: 90%;
+    margin-top: 30px;
+    /* width: 90%; */
+    width: 95%;
     background-color: #E1E1E1;
     border: none;
     outline: none;
@@ -287,4 +288,9 @@ h2.main-title {
     font-family: 'Arial Rounded MT', sans-serif;
     width: 80%;
     margin-right: 10px;
+}
+
+td.top
+{
+   vertical-align: top;
 }
