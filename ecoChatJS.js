@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () =>
   const mainDiv = document.getElementById("main");
   let botDiv = document.createElement("div");
   botDiv.id = "bot";
-  let greeting = "Hi! Welcome to EcoChat. Ask me about unsustainable/ sustainable or (non-)environmentally friendly brands. or type in /help";
-  botDiv.innerHTML = `Chatbot: <span id="bot-response">${greeting}</span>`;
+  let greeting = "Hi! Welcome to EcoChat. Ask me about unsustainable/ sustainable, (non-)environmentally friendly brands or type in /help.";
+  botDiv.innerHTML = `<table> <tr> <td class = "top"> Chatbot: &nbsp; &nbsp; </td> <td> <span id="bot-response">${greeting}</span> </td> </tr>`;
   mainDiv.appendChild(botDiv);
   // speak(product);
 
@@ -55,7 +55,7 @@ function output(input)
   if (compare(trigger, reply, text)) 
   {
     product = compare(trigger, reply, text);
-  } 
+  }
   else 
   {
   // Come up with a random phrase within that group.
@@ -75,12 +75,12 @@ function addChat(input, product)
   const mainDiv = document.getElementById("main");
   let userDiv = document.createElement("div");
   userDiv.id = "user";
-  userDiv.innerHTML = `You: <span id="user-response">${input}</span>`;
+  userDiv.innerHTML = `<table> <tr> <td class = "top"> You:  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td> <td> <span id="bot-response">${input}</span> </td> </tr> </table>`;
   mainDiv.appendChild(userDiv);
 
   let botDiv = document.createElement("div");
   botDiv.id = "bot";
-  botDiv.innerHTML = `Chatbot: <span id="bot-response">${product}</span>`;
+  botDiv.innerHTML = `<table> <tr> <td class = "top"> Chatbot: &nbsp; &nbsp; </td> <td> <span id="bot-response">${product}</span> </td> </tr> </table>`;
   mainDiv.appendChild(botDiv);
   //speak(product);
 }
@@ -175,7 +175,7 @@ alternative =
   "Come again?",
   "I couldn't quite understand your query.",
   "I hate programming this stupid bot.",
-  "We’re sorry, we can’t help you with that. You can post the question in the forum and await a reply!"
+  "We\'re sorry, we can\'t help you with that. You can post the question in the forum and await a reply!"
 ];
 
 function compare(triggerArray, replyArray, text) 
@@ -183,7 +183,6 @@ function compare(triggerArray, replyArray, text)
   let item;
 
   const textSplit = text.split(" ");
-  console.log(textSplit[0]);
   for (let x = 0; x < triggerArray.length; x++) 
   {
     for (let y = 0; y < triggerArray[x].length; y++) 
