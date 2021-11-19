@@ -93,13 +93,13 @@ const trigger =
   [""],
 
   //1
-  ["unsustainable", "non environmentally friendly"],
+  ["unsustainable", "nonenvironmentallyfriendly"],
 
   //2
-  ["shein", "victorias secret", "mango"],
+  ["shein", "victoriassecret", "mango"],
 
   //3
-  ["sustainable", "eco friendly", "environmentally friendly", "alternative choices", "alternate choices", "alternative options", "alternate options"],
+  ["sustainable", "ecofriendly", "environmentallyfriendly", "alternativechoices", "alternatechoices", "alternativeoptions", "alternateoptions"],
 
   //4
   ["levis", "uniqlo", "zalora"],
