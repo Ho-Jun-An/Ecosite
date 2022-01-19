@@ -27,32 +27,36 @@
     <link href="http://fonts.cdnfonts.com/css/bookman-old-style" rel="stylesheet">
 </head>
 
-<body id="main-body">
+<body class="main-body">
     <header class="top-bar">
         <h1 class="main-title">
             ECOSITE
         </h1>
+
+        <button id="contactUsButton" onclick="window.location.href='contactUs.html'">
+            <span>Contact Us</span>
+        </button>
     </header>
 
-    <section id="main-content">
+    <section class="main-content">
         <nav>
-            <button id="articlesButton" class="nav-button-normal" onclick="window.location.href='articlesOfTheMonth.html'">
-                <span class="nav-text">Articles<br>& news</span>
+            <button id="articlesButton" class="nav-button" onclick="window.location.href='articlesOfTheMonth.html'">
+                <span class="nav-text">Articles</span>
             </button>
-            <button id="forumButton" class="nav-button-normal" onclick="window.location.href='forum.html'">
-                <span class="nav-text">Forum</span>
-            </button>
-            <button id="ecoChatButton" class="nav-button-normal" onclick="window.location.href='ecoChat.html'">
+            
+            <button id="ecoChatButton" class="nav-button" onclick="window.location.href='ecoChat.html'">
                 <span class="nav-text">EcoChat</span>
+            </button>
+
+            <button id="forumButton" class="nav-button" onclick="window.location.href='forum.html'">
+                <span class="nav-text">Forum</span>
             </button>
         </nav>
     
-        <p id="main-info-1" class="main-text">
+        <p id="main-info">
             Take a step forward, <br>
-            make our world sustainable.
-        </p>
-    
-        <p id="main-info-2" class="main-text">
+            make our world sustainable. <br>
+            <br>
             We are a website, that will help <br>
             you live a more sustainable <br>
             lifestyle through your online <br>
@@ -60,10 +64,6 @@
         </p>
 
         <section id="main-contacts">
-            <h2 class="main-text">
-                Placeholder
-            </h2>
-    
             <a href="https://www.instagram.com/np.ecosite/">
                 Placeholder link
             </a>
