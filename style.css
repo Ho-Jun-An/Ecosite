@@ -1,4 +1,18 @@
-.main-title {
+.top-bar {
+    overflow: hidden;
+    background-color: #ded79b;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#main-body {
+    background-color: aqua;
+
+    margin-top: 30px;
+}
+
+/*.main-title {
     color: #707070;
     font-family: 'Bahnschrift', 'sans-serif';
 }
@@ -7,14 +21,14 @@ h1.main-title {
     font-size: 50px;
     position: absolute;
     top: -20px;
-    left: 250px;
+    left: 450px;
 }
 
 h2.main-title {
     font-size: 50px;
     position: absolute;
     top: 40px;
-    left: 320px;
+    left: 520px;
 }
 
 .nav-button-normal {
@@ -31,26 +45,13 @@ h2.main-title {
     font-size: 20px;
 }
 
-#ecoChatButtonTitle {
-    font-family: 'Bookman Old Style', sans-serif;
-    font-weight: bold;
-    font-size: 25px;
-}
-
-#ecoChatButtonSubtitle {
-    font-size: 15px;
-}
-
-#articlesButton {
-    width: 230px;
-    height: 230px;
-    background-color: #C6E7A0;
+#forumButton {
+    width: 250px;
+    height: 250px;
+    background-color: #9FE7CA;
     position: absolute;
-    top: 150px;
-    left: 130px;
-    border-style: solid;
-    border-width: 20px;
-    border-color: #AAD4A2;
+    top: 140px;
+    left: 165px;
 }
 
 #ecoChatButton {
@@ -61,43 +62,62 @@ h2.main-title {
     border-width: 20px;
     border-color: #67BDB1;
     position: absolute;
-    top: 200px;
-    left: 400px;
+    top: 350px;
+    left: 350px;
 }
 
-#aboutButton {
-    width: 200px;
-    height: 200px;
-    background-color: #B7D565;
-    border-style: solid;
-    border-width: 10px;
-    border-color: #a6bd66;
+#articlesButton {
+    width: 170px;
+    height: 170px;
+    background-color: #AAD4A2;
     position: absolute;
+    border-style: solid;
+    border-width: 20px;
+    border-color: #AAD4A2;
     top: 400px;
-    left: 200px;
+    left: 150px;
 }
 
-#contact-title {
-    font-family: 'Bookman Old Style', sans-serif;
-    font-weight: bold;
-    font-size: 50px;
+.main-text {
+    font-family: 'Arial Rounded MT', sans-serif;
     color: #707070;
-    margin-top: 50px;
-    margin-left: 820px;
-}
-
-.contact-text {
-    font-family: 'Bookman Old Style', sans-serif;
+    max-width: 90%;
     font-size: 20px;
-    margin-top: 20px;
-    margin-left: 820px;
 }
 
-#instagram-image {
-    width: 40%;
-    height: 500;
-    margin-left: 700px;
+#main-info-1 {
+    position: absolute;
+    top: 150px;
+    left: 450px;
 }
+
+#main-info-2 {
+    position: absolute;
+    top: 250px;
+    left: 450px;
+}
+
+#main-info-3 {
+    position: absolute;
+    top: 300px;
+    left: 550px;
+}
+
+#main-contacts {
+    padding: 10px;
+    background-color: #70af96;
+}*/
+
+
+
+
+
+
+
+
+
+
+
 
 .back-button {
     font-family: 'Bookman Old Style', sans-serif;
