@@ -1,4 +1,4 @@
-/* CSS for index.html */
+/* CSS for index.html and other general elements */
 
 .top-bar {
     overflow: hidden;
@@ -22,6 +22,48 @@
     font-family: 'Arial Rounded MT', sans-serif;
 }
 
+.home-button {
+    float: left;
+    display: block;
+    padding: 5px;
+    display: flex;
+    position: relative;
+    top: 32.5px;
+    left: 35px;
+}
+
+.home-button-icon {
+    width: 50px;
+}
+
+.home-button-icon:hover {
+    width: 55px;
+    -webkit-filter: drop-shadow(0px 0px 3px grey);
+    filter: drop-shadow(0px 0px 3px grey);
+}
+
+.hamburger-button {
+    float: right;
+    display: block;
+    padding: 5px;
+    display: flex;
+    position: relative;
+    top: 32.5px;
+    right: 40px;
+}
+
+.hamburger-button-icon {
+    width: 50px;
+    -webkit-filter: drop-shadow(0px 0px 10px grey);
+    filter: drop-shadow(0px 0px 10px grey);
+}
+
+.hamburger-button-icon:hover {
+    width: 55px;
+    -webkit-filter: drop-shadow(0px 0px 13px rgb(80, 80, 80));
+    filter: drop-shadow(0px 0px 13px rgb(80, 80, 80));
+}
+
 #contactUsButton {
     float: right;
     position: relative;
@@ -39,6 +81,27 @@
 #contactUsButton:hover {
     font-size: 32px;
     text-shadow: 0px 0px 3px grey;
+}
+
+.bottom-bar {
+    overflow: hidden;
+    position: fixed;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    z-index: 0.9;
+}
+
+.bar-title {
+    float: left;
+    display: block;
+    color: #f1f3f5;
+    text-align: center;
+    padding: 3px;
+    padding-left: 60px;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Arial Rounded MT', sans-serif;
 }
 
 .main-content {
@@ -97,12 +160,48 @@
     left: 370px;
 }
 
+#index-images {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    top: 30px;
+    left: 150px;
+    z-index: -1;
+}
+
+.index-image {
+    border-radius: 150px;
+}
+
+#index-image-1 {
+    width: 35%;
+    left: 270px;
+}
+
+#index-image-2 {
+    width: 45%;
+    left: 220px;
+}
+
 /* CSS for contactUs.html */
 
 #contactUs-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    top: 15px;
+}
+
+#contactUs-title {
+    color: #000000;
+    text-align: center;
+    margin: 20px;
+    font-size: 45px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    position: relative;
+    top: 15px;
 }
 
 #contactUs-icons-container {
@@ -110,16 +209,26 @@
     justify-content: space-around;
     align-items: center;
     width: 50%;
-    background-color: aqua;
+    position: relative;
+    top: 50px;
 }
 
 .contactUs-icons-image {
-    width: 50%;
+    width: 95px;
     height: auto;
-
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.contactUs-icons-image:hover {
+    width: 98px;
+    -webkit-filter: drop-shadow(0px 0px 3px grey);
+    filter: drop-shadow(0px 0px 3px grey);
+
+    position: relative;
+    bottom: 1px;
+    right: 1px;
 }
 
 #contactUs-emails-container {
@@ -127,26 +236,85 @@
     flex-direction: column;
     align-items: center;
     width: 70%;
+    position: relative;
+    top: 100px;
 }
 
-/*.back-button {
-    font-family: 'Bookman Old Style', sans-serif;
-    font-weight: bold;
-    font-size: 50px;
-    border-style: none;
-    background-color: transparent;
-    position: absolute;
-    top: 10px;
-    left: 20px;
+.contactUs-email {
+    color: #000000;
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+    font-family: 'Arial Rounded MT', sans-serif;
 }
 
-#center-title {
+/* CSS for articles.html */
+
+.articles-bar {
+    background-color: #87a260;
+}
+
+#articles-body {
     display: flex;
     justify-content: center;
-    font-family: 'Bookman Old Style', sans-serif;
-    font-weight: bold;
-    font-size: 50px;
-    color: #707070;
+}
+
+.articles-main-content {
+    margin-top: 245px;
+}
+
+.articlePanels-container {
+    display: flex;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    width: 95%;
+    padding: 10px;
+}
+
+.articlePanel {
+    height: 400px;
+    width: 250px;
+    border-style: none;
+    border: none;
+    padding: 5px;
+    margin: 12px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    color: #2a2920;
+    background-color: #d2d2d2;
+}
+
+.articlePanel-title {
+    font-size: 30px;
+}
+
+.articlePanel-description {
+    font-size: 18px;
+}
+
+.article-thumbnail {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.articlePanel:hover {
+    height: 403px;
+    width: 253px;
+    box-shadow: 0px 0px 25px grey;
+}
+
+/* CSS for ecoChat.html */
+
+.ecoChat-bar {
+    background-color: #76bda9;
+}
+
+/* #ecoChat-body {
+
+} */
+
+.ecoChat-main-content {
+    margin-top: 245px;
 }
 
 #ecoChat-box {
@@ -166,8 +334,8 @@
     width: 50px;
     height: 50px;
     margin-top: 25px;
-    //margin-bottom: 20px;
-    //margin-left: 20px;
+    /* margin-bottom: 20px;
+    margin-left: 20px; */
     align-self: flex-start;
 }
 
@@ -187,81 +355,14 @@
 .ecoChat-inputbox {
     padding: 10px;
     margin-top: 30px;
-    //width: 90%;
+    /* width: 90%; */
     width: 95%;
     background-color: #E1E1E1;
     border: none;
     outline: none;
 }
 
-#articlesOfTheMonth-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#articlesOfTheMonth {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #9AC8C2;
-    padding: 10px;
-    margin-left: 70px;
-    margin-right: 70px;
-    border-style: solid;
-    border-width: 15px;
-    border-color: #AAD4A2;
-}
-
-.articleList-article {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    background-color: #C6E7A0;
-    padding: 5px;
-    border-style: solid;
-    border-width: 3px;
-    border-color: black;
-    margin: 10px;
-    width: 90%;
-}
-
-.external-article {
-    background-color: #bebebe;
-    border-color: rgb(71, 71, 71);
-}
-
-.articleList-name {
-    font-family: 'Bookman Old Style', sans-serif;
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.articleList-author {
-    color: rgb(63, 63, 63);
-}
-
-.articleList-date {
-    color: rgb(63, 63, 63);
-}
-
-#archivesButtonContainer {
-    display: flex;
-    justify-content: center;
-}
-
-#archivesButton {
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    background-color: #a8a8a8;
-    padding: 8px;
-    border-style: solid;
-    border-width: 4px;
-    border-color: rgb(109, 109, 109);
-    margin: 20px;
-    width: 40%;
-}
-
-.archives-search {
+/*.archives-search {
     padding: 10px;
     margin: 10px;
     width: 70%;

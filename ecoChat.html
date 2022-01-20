@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ecoChat</title>
+    <title>EcoChat</title>
     <script type="text/javascript" src="ecoChatJS.js"></script>
     <link rel="stylesheet" href="style.css">
 
@@ -11,18 +11,24 @@
     <link href="http://fonts.cdnfonts.com/css/bookman-old-style" rel="stylesheet">
 </head>
 
-<script>
-    function goBack() {
-      window.history.back();
-    }
-</script>
-
 <body style="background-color: #feffe9">
-    <h1 id="center-title">
-        EcoChat
-    </h1>
+    <header class="top-bar">
+        <h1 class="main-title">
+            ECOSITE
+        </h1>
 
-    <section id="ecoChat-box">
+        <a class="home-button" href="index.html"><img class="home-button-icon" src="images/home-icon.png"></a>
+
+        <a class="hamburger-button" href="#"><img class="hamburger-button-icon" src="images/hamburger-bar.png"></a>
+    </header>
+
+    <header class="bottom-bar ecoChat-bar">
+        <h1 class="bar-title">
+            EcoChat
+        </h1>
+    </header>
+
+    <section id="ecoChat-box" class="main-content ecoChat-main-content">
         <table>
             <tr>
                 <td>
@@ -43,15 +49,8 @@
 
                 </td>
             </tr>
-        </table>
-
-        
-            
-        </div>
-        
+        </table>       
     </section>
-
-    <button class="back-button" onclick="goBack()">&#60;</button>
 </body>
 
 </html>
