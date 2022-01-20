@@ -1,3 +1,5 @@
+/* CSS for index.html */
+
 .top-bar {
     overflow: hidden;
     background-color: #ded79b;
@@ -34,6 +36,11 @@
     background: none;
 }
 
+#contactUsButton:hover {
+    font-size: 32px;
+    text-shadow: 0px 0px 3px grey;
+}
+
 .main-content {
     margin-top: 125px;
 }
@@ -52,7 +59,7 @@
 .nav-button:hover {
     width: 280px;
     height: 280px;
-    box-shadow:-5px 5px 25px grey;
+    box-shadow: -5px 5px 25px grey;
 }
 
 .nav-text {
@@ -66,7 +73,6 @@
     background-color: #a5d2c5;
     top: 150px;
     left: -30px;
-    /* left: 500px; */
 }
 
 #ecoChatButton {
@@ -89,6 +95,38 @@
     position: absolute;
     top: 170px;
     left: 370px;
+}
+
+/* CSS for contactUs.html */
+
+#contactUs-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactUs-icons-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    background-color: aqua;
+}
+
+.contactUs-icons-image {
+    width: 50%;
+    height: auto;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contactUs-emails-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
 }
 
 /*.back-button {
