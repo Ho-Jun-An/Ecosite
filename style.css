@@ -291,7 +291,7 @@
     font-size: 18px;
 }
 
-.article-thumbnail {
+.articlePanel-thumbnail {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -309,14 +309,6 @@
     background-color: #76bda9;
 }
 
-/* #ecoChat-body {
-
-} */
-
-.ecoChat-main-content {
-    margin-top: 245px;
-}
-
 #ecoChat-box {
     display: flex;
     flex-direction: column;
@@ -324,6 +316,7 @@
     background-color: #9AC8C2;
     padding: 10px;
     margin: auto;
+    margin-top: 230px;
     width: 90%;
 }
 
@@ -362,6 +355,12 @@
     outline: none;
 }
 
+/* CSS for articles-archive.html */
+
+.articles-archive-main-content {
+    margin-top: 245px;
+}
+
 /*.archives-search {
     padding: 10px;
     margin: 10px;
@@ -380,7 +379,7 @@
     color: #5e5e5e;
 }
 
-.article-archives-list {
+.articles-archive-list {
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -12,16 +12,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 
-<script>
-    function goBack() {
-      window.history.back();
-    }
-</script>
+<body id="articles-archive-body" class="main-body">
+    <header class="top-bar">
+        <h1 class="main-title">
+            ECOSITE
+        </h1>
 
-<body style="background-color: #feffe9">
-    <h1 id="center-title">
-        Article Archives
-    </h1>
+        <a class="home-button" href="index.html"><img class="home-button-icon" src="images/home-icon.png"></a>
+
+        <a class="hamburger-button" href="#"><img class="hamburger-button-icon" src="images/hamburger-bar.png"></a>
+    </header>
+
+    <header class="bottom-bar articles-bar">
+        <h1 class="bar-title">
+            Articles Archive
+        </h1>
+    </header>
 
     <section id="archive-search-results">
         <input id="search-article" class="archives-search" type="text" placeholder="Search for article..." autocomplete="off" />
@@ -31,14 +37,11 @@
         </div>
     </section>
 
-    <nav class="article-archives-list">
-        <button class="articleList-article" onclick="window.location.href='#'">
-            <span class="articleList-name">No Article</span> <br>
-            <span class="articleList-author">No Author</span> <br>
-            <span class="articleList-date">No Date</span>
+    <nav class="main-content articlesArchive-main-content">
+        <button class="articlesArchive-article" onclick="window.location.href='#'">
+            <span class="articlesArchive-name">No Name</span> <br>
+            <span class="articlesArchive-info">No Info</span>
         </button>
     </nav>
-    
-    <button class="back-button" onclick="goBack()">&#60;</button>
 </body>
 </html>
