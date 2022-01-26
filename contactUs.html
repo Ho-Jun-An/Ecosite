@@ -10,6 +10,47 @@
     <link href="http://fonts.cdnfonts.com/css/bahnschrift" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/arial-rounded-mt" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/bookman-old-style" rel="stylesheet">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        
+        function sendEmail() 
+        {
+            while (true) 
+            {
+                let text;
+                let email = prompt("Please enter your email address:");
+                if (ValidateEmail(email)) {
+                    Email.send(
+                        {
+                            Host: "smtp.gmail.com",
+                            Username: "ecositenewsletter@gmail.com",
+                            Password: "(8F*Ep8rh94$",
+                            To: email,
+                            From: "ecositenewsletter@gmail.com",
+                            Subject: "<h1> ddd </h1>",
+                            Body: "And this is the body"
+                        }
+                    ).then
+                        (
+                            alert("Please check your email inbox. Otherwise, you may have to enter your email address again.")
+                        );
+                    break;
+                }
+                else {
+                    alert('Error. Please check your email address.')
+                }
+
+                function ValidateEmail(mail) {
+                    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+                        return (true)
+                    }
+                    alert("You have entered an invalid email address!")
+                    return (false)
+                }
+            }            
+        }
+    </script>
 </head>
 
 <body class="main-body">
@@ -31,7 +72,7 @@
 
             <a class="contactUs-icons" href="#"><img class="contactUs-icons-image" src="images/facebook-icon.png"></a>
 
-            <a class="contactUs-icons" href="#"><img class="contactUs-icons-image" src="images/envelope-icon.png"></a>
+            <a class="contactUs-icons" onclick="sendEmail()"><img class="contactUs-icons-image" src="images/envelope-icon.png"></a>
         </section>
 
         <section id="contactUs-emails-container">
