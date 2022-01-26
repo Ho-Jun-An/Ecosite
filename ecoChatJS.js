@@ -9,28 +9,34 @@
 
 document.addEventListener("DOMContentLoaded", () => 
 {
-  const mainDiv = document.getElementById("main");
-  let botDiv = document.createElement("div");
-  botDiv.id = "bot";
-  let greeting = "Hi! Welcome to EcoChat. Ask me about unsustainable/ sustainable, (non-)environmentally friendly brands or type in /help.";
-  botDiv.innerHTML = `<table> <tr> <td class = "top"> Chatbot: &nbsp; &nbsp; </td> <td> <span id="bot-response">${greeting}</span> </td> </tr>`;
-  mainDiv.appendChild(botDiv);
-  // speak(product);
+  // Select ecoChat textbox
+  const ecoChatInputbox = document.getElementById("ecoChat-textbox");
 
-  // Get input as inputField.
-  const inputField = document.getElementById("input")
-  // Detect keypresses for inputField.
-  inputField.addEventListener("keydown", function(e) 
+  // Create bot icon
+  let botIcon = document.createElement("img");
+  // Assign class and img for bot icon
+  botIcon.className = "botIcon"
+  botIcon.src = "images/ecoChat-icon.png"
+  // Add bot icon to html
+  ecoChatInputbox.appendChild(botIcon);
+
+  // Create div for bot reply
+  let botReply = document.createElement("div");
+  // Assign class for bot reply div
+  botReply.className = "botReply";
+  // Add reply for div
+  botReply.innerHTML = "Hi! Welcome to EcoChat. Ask me about unsustainable/ sustainable, (non-)environmentally friendly brands or type in /help.";
+  // Add reply to html
+  ecoChatInputbox.appendChild(botReply);
+
+  // Detect user pressing Enter key.
+  ecoChatInputbox.addEventListener("keydown", function(e) 
   {
-    // In this case, it would be the Enter key.
     if (e.code === "Enter") 
     {
-      // Get user input from <input> in EcoChat.html once Enter is pressed
-      let input = document.getElementById("input").value;
-
+      // Get text from <input> in ecoChat.html
+      let input = document.getElementById("ecoChat-inputbox").value;
       output(input); 
-
-      // output(input);
     }
   });
 });
@@ -38,12 +44,10 @@ document.addEventListener("DOMContentLoaded", () =>
 function output(input) 
 {
   let product;
-  // Removes everything but word charaters, whitespaces 
-  // and digits.
+  // Removes everything but word charaters, whitespaces, and digits.
   let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");
   
-  // Replaces everything on the left of the comma 
-  // inside the bracket .
+  // Replaces everything on the left of the comma inside the bracket.
   text = text
     .replace(/ a /g, " ")
     .replace(/i feel /g, "")
@@ -51,19 +55,18 @@ function output(input)
     .replace(/please /g, "")
     .replace(/ please/g, "");
 
-  
+  // Test for any results after searching bot
   if (compare(trigger, reply, text)) 
   {
     product = compare(trigger, reply, text);
   }
   else 
   {
-  // Come up with a random phrase within that group.
-  product = alternative[Math.floor(Math.random() * 
-    alternative.length)];
+    // Random phrase if searching fails.
+    product = alternative[Math.floor(Math.random() * alternative.length)];
   }
 
-  //clear input value
+  //clear user input
   document.getElementById("input").value = "";
 
   // Updates DOM.
@@ -72,16 +75,16 @@ function output(input)
 
 function addChat(input, product) 
 {
-  const mainDiv = document.getElementById("main");
+  const maiecoChatInputboxnDiv = document.getElementById("ecoChat-textbox");
   let userDiv = document.createElement("div");
   userDiv.id = "user";
   userDiv.innerHTML = `<table> <tr> <td class = "top"> You: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td> <td> <span id="bot-response">${input}</span> </td> </tr> </table>`;
-  mainDiv.appendChild(userDiv);
+  ecoChatInputbox.appendChild(userDiv);
 
-  let botDiv = document.createElement("div");
-  botDiv.id = "bot";
-  botDiv.innerHTML = `<table> <tr> <td class = "top"> Chatbot: &nbsp; &nbsp; </td> <td> <span id="bot-response">${product}</span> </td> </tr> </table>`;
-  mainDiv.appendChild(botDiv);
+  let botReply = document.createElement("div");
+  botReply.id = "bot";
+  botReply.innerHTML = `<table> <tr> <td class = "top"> Chatbot: &nbsp; &nbsp; </td> <td> <span id="bot-response">${product}</span> </td> </tr> </table>`;
+  ecoChatInputbox.appendChild(botReply);
   //speak(product);
 }
 
