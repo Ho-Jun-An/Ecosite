@@ -75,7 +75,7 @@ function addChat(input, product)
   const mainDiv = document.getElementById("main");
   let userDiv = document.createElement("div");
   userDiv.id = "user";
-  userDiv.innerHTML = `<table> <tr> <td class = "top"> You:  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td> <td> <span id="bot-response">${input}</span> </td> </tr> </table>`;
+  userDiv.innerHTML = `<table> <tr> <td class = "top"> You: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td> <td> <span id="bot-response">${input}</span> </td> </tr> </table>`;
   mainDiv.appendChild(userDiv);
 
   let botDiv = document.createElement("div");
@@ -174,7 +174,6 @@ alternative =
   "Please try again",
   "Come again?",
   "I couldn't quite understand your query.",
-  "I hate programming this stupid bot.",
   "We\'re sorry, we can\'t help you with that. You can post the question in the forum and await a reply!"
 ];
 

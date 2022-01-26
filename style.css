@@ -371,11 +371,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #9AC8C2;
+    background-color: #a5c3ba;
     padding: 10px;
     margin: auto;
     margin-top: 230px;
-    width: 90%;
+    width: 80%;
+    border-radius: 50px;
 }
 
 #ecoChat-icon {
@@ -385,8 +386,7 @@
     width: 50px;
     height: 50px;
     margin-top: 25px;
-    /* margin-bottom: 20px;
-    margin-left: 20px; */
+    margin-left: 25px;
     align-self: flex-start;
 }
 
@@ -399,18 +399,23 @@
     height: 500px;
     border-radius: 20px;
     margin-top: 30px;
-    margin-bottom: 30px;
-    width: 95%;
+    margin-bottom: 20px;
+    width: 90%;
 }
 
 .ecoChat-inputbox {
     padding: 10px;
-    margin-top: 30px;
-    /* width: 90%; */
-    width: 95%;
+    border-radius: 12.5px;
+    margin-bottom: 20px;
+    width: 75%;
     background-color: #E1E1E1;
     border: none;
     outline: none;
+}
+
+td.top
+{
+   vertical-align: top;
 }
 
 /* CSS for articles-archive.html */
@@ -504,9 +509,4 @@
     font-family: 'Arial Rounded MT', sans-serif;
     width: 80%;
     margin-right: 10px;
-}
-
-td.top
-{
-   vertical-align: top;
 }*/
