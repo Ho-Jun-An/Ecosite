@@ -364,7 +364,7 @@
 /* CSS for ecoChat.html */
 
 .ecoChat-bar {
-    background-color: #76bda9;
+    background-color: #87a260;
 }
 
 #ecoChat-box {
@@ -379,31 +379,20 @@
     border-radius: 50px;
 }
 
-#ecoChat-icon {
-    padding: 10px;
-    background-color: #4e4e4e;
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    margin-top: 25px;
-    margin-left: 25px;
-    align-self: flex-start;
-}
-
-.ecoChat-textbox {
+#ecoChat-textbox {
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
     background-color: #E1E1E1;
     padding: 10px;
-    height: 500px;
+    height: 350px;
     border-radius: 20px;
     margin-top: 30px;
     margin-bottom: 20px;
-    width: 90%;
+    width: 95%;
+    overflow-y: scroll;
 }
 
-.ecoChat-inputbox {
+#ecoChat-inputbox {
     padding: 10px;
     border-radius: 12.5px;
     margin-bottom: 20px;
@@ -413,9 +402,48 @@
     outline: none;
 }
 
-td.top
-{
-   vertical-align: top;
+.botIcon {
+    display: flex;
+    align-self: flex-start;
+    padding: 10px;
+    background-color: #808080;
+    border-radius: 100%;
+    margin: 5px;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.botReply {
+    display: flex;
+    align-self: flex-start;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 40%;
+    background-color: #d2d2d2;
+}
+
+.userIcon {
+    display: flex;
+    align-self: flex-end;
+    padding: 10px;
+    background-color: #808080;
+    border-radius: 100%;
+    margin: 5px;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.userReply {
+    display: flex;
+    align-self: flex-end;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 40%;
+    background-color: #d2d2d2;
 }
 
 /* CSS for articles-archive.html */
