@@ -1,7 +1,7 @@
 {
   "name": "ecosite",
   "version": "1.0.0",
-  "type": "commonjs",
+  "type": "module", 
   "description": "",
   "main": "sendNewsletter.js",
   "scripts": {
