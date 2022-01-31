@@ -61,6 +61,38 @@ document.addEventListener("DOMContentLoaded", () =>
       output(input); 
     }
   });
+
+  const ecoChatButton = document.querySelector(".ecoChat-inputButton");
+
+  ecoChatButton.addEventListener("click", clickDetector);
+
+  // Detect user pressing button.
+  function clickDetector() {
+    // Get text from <input> in ecoChat.html
+    let input = document.getElementById("ecoChat-inputbox").value;
+
+    // Select ecoChat textbox
+    const ecoChatTextbox = document.getElementById("ecoChat-textbox");
+
+    // Create user icon
+    let userIcon = document.createElement("img");
+    // Assign class and img for user icon
+    userIcon.className = "userIcon"
+    userIcon.src = "images/ecoChat-icon.png"
+    // Add user icon to html
+    ecoChatTextbox.appendChild(userIcon);
+
+    // Create div for user reply
+    let userReply = document.createElement("div");
+    // Assign class for user reply div
+    userReply.className = "userReply";
+    // Add reply for div
+    userReply.innerHTML = `${input}`;
+    // Add reply to html
+    ecoChatTextbox.appendChild(userReply);
+
+    output(input); 
+  };
 });
 
 function output(input) 

@@ -440,9 +440,8 @@
 }
 
 .ecoChat-replyIcon:hover {
-    width: 27px;
-    -webkit-filter: drop-shadow(0px 0px 3px grey);
-    filter: drop-shadow(0px 0px 3px grey);
+    -webkit-filter: drop-shadow(0px 0px 5px grey);
+    filter: drop-shadow(0px 0px 5px grey);
 }
 
 #ecoChat-inputButton {
@@ -499,8 +498,14 @@
 
 /* CSS for articles-archive.html */
 
+#articles-archive-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .articlesArchive-main-content {
-    margin-top: 200px;
+    margin-top: 10px;
 }
 
 .articleArchives-container {
@@ -555,6 +560,57 @@
 .articlesArchive-article-info {
     font-size: 12px;
     color: white;
+}
+
+.archives-search {
+    outline: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #808080;
+    float: right;
+    display: block;
+    background-color: #e9e9e9;
+    padding: 10px;
+    margin: 20px;
+    width: 30%;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Arial Rounded MT', sans-serif;
+}
+
+.article-replyIcon {
+    height: auto;
+    float: right;
+    display: block;
+    margin: 28px;
+    width: 25px;
+}
+
+.article-replyIcon:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px grey);
+    filter: drop-shadow(0px 0px 5px grey);
+}
+
+#archive-search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    width: 95%;
+}
+
+#archive-results-container {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: 95%;
+    padding: 10px;
+}
+
+#search-results-title {
+    font-family: 'Arial Rounded MT', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
 }
 
 /* CSS for articles */
@@ -624,62 +680,3 @@
     margin: 20px;
     object-fit: contain;
 }
-
-/*.archives-search {
-    padding: 10px;
-    margin: 10px;
-    width: 70%;
-    background-color: #9FE7CA;
-    border-style: solid;
-    border-width: 5px;
-    border-color: #70af96;
-    outline: none;
-}
-
-#search-results-title {
-    font-family: 'Bookman Old Style', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    color: #5e5e5e;
-}
-
-.articles-archive-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 70px;
-    margin-right: 70px;
-}
-
-#archive-search-results {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 70px;
-    margin-right: 70px;
-    background-color: #9AC8C2;
-    padding: 10px;
-    border-style: solid;
-    border-width: 15px;
-    border-color: #AAD4A2;
-}
-
-.general-content {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-left: 50px;
-}
-
-.general-title {
-    font-size: 30px;
-    font-family: 'Arial Rounded MT', sans-serif;
-    width: 80%;
-}
-
-.general-text {
-    font-size: 20px;
-    font-family: 'Arial Rounded MT', sans-serif;
-    width: 80%;
-    margin-right: 10px;
-}*/

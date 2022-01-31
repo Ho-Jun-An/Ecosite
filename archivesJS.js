@@ -36,7 +36,7 @@ function output(input)
   let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");
   const textWords = text.split(" ");
   
-searchResults = compare(trigger, reply, textWords);
+  searchResults = compare(trigger, reply, textWords);
 
   if (searchResults.length == 0) {
     product = noResults;
@@ -50,51 +50,56 @@ searchResults = compare(trigger, reply, textWords);
 
 function displayResults(product) 
 {
-  const resultsDiv = document.getElementById("archive-results-container");
+  const resultsDiv = document.getElementById("archive-search-results");
+  const resultsContainer = document.getElementById("archive-results-container");
 
   // Display search bar, title and archive-results-container
-  document.getElementById("archive-results-container").innerHTML = "<h1 id=\"search-results-title\">Search Results</h1>"
+  var tempTitleDiv = document.createElement('div');
+  tempTitleDiv.innerHTML = "<h1 id=\"search-results-title\">Search Results:</h1>";
+  resultsDiv.prepend(tempTitleDiv.firstChild);
 
   // Display articles
   for (a = 0; a < product.length; a++) {
     var tempDiv = document.createElement('div');
     tempDiv.innerHTML = product[a];
-    resultsDiv.appendChild(tempDiv.firstChild);
+    resultsContainer.appendChild(tempDiv.firstChild);
   }
+
+  //Add box to results
+  resultsDiv.style.backgroundColor = '#9b9b9b';
+  resultsDiv.style.borderStyle = 'solid';
+  resultsDiv.style.borderColor = '#3b3b3b';
+  resultsDiv.style.borderWidth = '5px';
 }
 
 // If the word or phrase is in the double quotes, 
 // do something.
 const trigger = 
 [ 
-  ["sustainability", "in", "our", "generation", "why", "is", "it", "important", "ethan", "han", "17", "seventeen", "november", "nov", "2021"],  
+  ["what", "we", "can", "do", "to", "live", "more", "sustainable", "lives"],  
   
-  ["fast", "fashion", "an", "epidemic", "rajeshkanna", "thaanya", "17", "seventeen", "november", "nov", "2021"],
-
-  ["inside", "a", "denim", "factory", "in", "nairobi", "in", "pictures", "baz", "ratner", "19", "nineteen", "november", "nov", "2021"]
+  ["what", "ways", "has", "Singapore", "committed", "to", "creating", "a", "more", "sustainable", "country"],
 ];
 
 // That something would be to reply with the word or phrase
 // inside the double quotes.
 const reply = 
 [
-  "<button class=\"articleList-article\" onclick=\"window.location.href='articles/sustainabilityInOurGeneration.html'\">" +
-   "<span class=\"articleList-name\">Sustainability in our generation: why is it important?</span> <br>" +
-   "<span class=\"articleList-author\">By Ethan Han</span> <br>" +
-   "<span class=\"articleList-date\">17th November 2021</span>" +
-   "</button>",
+  "<button class=\"articlesArchive-article\" onclick=\"window.location.href='articles/article1.html'\">" +
+  "<img class=\"articlesArchive-thumbnail\" src=\"articles/article-images/article1.png\">" +
+  "<section class=\"articlesArchive-text\">" +
+      "<span class=\"articlesArchive-article-name\">What we can do to live more sustainable lives</span> <br>" +
+      "<span class=\"articlesArchive-article-info\">By ???, 31/1/2022</span>" +
+  "</section>" +
+  "</button>",
 
-  "<button class=\"articleList-article\" onclick=\"window.location.href='articles/fastFashionAnEpidemic.html'\">" +
-   "<span class=\"articleList-name\">Fast Fashion: an epidemic</span> <br>" +
-   "<span class=\"articleList-author\">By Rajeshkanna Thaanya</span> <br>" +
-   "<span class=\"articleList-date\">17th November 2021</span>" +
-   "</button>",
-
-  "<button class=\"articleList-article external-article\" onclick=\"window.location.href='https\://www.theguardian.com/fashion/gallery/2017/apr/26/inside-denim-factory-nairobi-kenya-in-pictures'\">" +
-   "<span class=\"articleList-name\">Inside a Denim Factory in Nairobi - in Pictures</span> <br>" +
-   "<span class=\"articleList-author\">By Baz Ratner</span> <br>" +
-   "<span class=\"articleList-date\">19th November 2021</span>" +
-   "</button>"
+  "<button class=\"articlesArchive-article\" onclick=\"window.location.href='articles/article2.html'\">" +
+  "<img class=\"articlesArchive-thumbnail\" src=\"articles/article-images/article2.jpg\">" +
+  "<section class=\"articlesArchive-text\">" +
+      "<span class=\"articlesArchive-article-name\">What ways has Singapore committed to creating a more sustainable country</span> <br>" +
+      "<span class=\"articlesArchive-article-info\">By ???, 31/1/2022</span>" +
+  "</section>" +
+  "</button>"
 ];
 
 const noResults = ["<button class=\"articleList-article\"> <span class=\"articleList-name\">No Results</span> <br> </button>"]
