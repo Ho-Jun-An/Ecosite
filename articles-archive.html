@@ -20,7 +20,13 @@
 
         <a class="home-button" href="index.html"><img class="home-button-icon" src="images/home-icon.png"></a>
 
-        <a class="hamburger-button" href="#"><img class="hamburger-button-icon" src="images/hamburger-bar.png"></a>
+        <div class="hamburger-button"><img class="hamburger-button-icon" src="images/hamburger-bar.png"></div>
+
+        <nav class="hamburger-menu">
+            <button onclick="window.location.href='articles.html'" class="hamburger-link hamburger-articles-link">Articles</a>
+            <button onclick="window.location.href='ecoChat.html'" class="hamburger-link hamburger-ecoChat-link">EcoChat</a>
+            <button onclick="window.location.href='#'" class="hamburger-link hamburger-forum-link">Forum</a>
+        </nav>
     </header>
 
     <header class="bottom-bar articles-bar">
@@ -39,14 +45,20 @@
 
     <nav class="main-content articlesArchive-main-content">
         <nav class="articleArchives-container">
-            <button class="articlesArchive-article" onclick="window.location.href='#'">
-                <span class="articlesArchive-article-name">No Name</span> <br>
-                <span class="articlesArchive-article-info">No Info</span>
+            <button class="articlesArchive-article" onclick="window.location.href='articles/article1.html'">
+                <img class="articlesArchive-thumbnail" src="articles/article-images/article1.png">
+                <section class="articlesArchive-text">
+                    <span class="articlesArchive-article-name">What we can do to live more sustainable lives</span> <br>
+                    <span class="articlesArchive-article-info">By ???, 31/1/2022</span>
+                </section>
             </button>
 
-            <button class="articlesArchive-article" onclick="window.location.href='#'">
-                <span class="articlesArchive-article-name">No Name</span> <br>
-                <span class="articlesArchive-article-info">No Info</span>
+            <button class="articlesArchive-article" onclick="window.location.href='articles/article2.html'">
+                <img class="articlesArchive-thumbnail" src="articles/article-images/article2.jpg">
+                <section class="articlesArchive-text">
+                    <span class="articlesArchive-article-name">What ways has Singapore committed to creating a more sustainable country</span> <br>
+                    <span class="articlesArchive-article-info">By ???, 31/1/2022</span>
+                </section>
             </button>
 
             <button class="articlesArchive-article" onclick="window.location.href='#'">
@@ -92,3 +104,5 @@
     </nav>
 </body>
 </html>
+
+<script type="text/javascript" src="hamburgerJS.js"></script>

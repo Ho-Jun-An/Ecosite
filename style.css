@@ -1,4 +1,33 @@
+/* CSS for scrollwheel */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  background-color: rgb(190, 190, 190);
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(130, 130, 130); 
+  border-radius: 10px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #666666; 
+}
+
 /* CSS for index.html and other general elements */
+
+.main-body {
+    overflow-x: hidden;
+}
 
 .top-bar {
     overflow: hidden;
@@ -7,7 +36,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .main-title {
@@ -42,20 +71,6 @@
     filter: drop-shadow(0px 0px 3px grey);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .hamburger-button {
     float: right;
     display: block;
@@ -80,47 +95,51 @@
 }
 
 .hamburger-menu {
-    position: fixed;
-    left: -100%;
-    top: 5rem;
+    display: flex;
     flex-direction: column;
-    background-color: #fff;
-    width: 100%;
+    align-items: center;
+    position: fixed;
+    right: -100%;
+    top: 100px;
+    background-color: #d2d2d2;
+    width: 20%;
     border-radius: 10px;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+}
+
+.hamburger-link {
+    font-size: 20px;
+    font-family: 'Arial Rounded MT', sans-serif;
     text-align: center;
-    transition: 0.3s;
-    box-shadow:
-        0 10px 27px rgba(0, 0, 0, 0.05);
+    width: 75%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 8px;
+    box-shadow: 0px 0px 10px grey;
+}
+
+.hamburger-link:hover {
+    box-shadow: 0px 0px 20px black;
+}
+
+.hamburger-articles-link {
+    margin-top: 30px;
+    background-color: #d4e0c2;
+}
+
+.hamburger-ecoChat-link {
+    background-color: #bcdac1;
+}
+
+.hamburger-forum-link {
+    margin-bottom: 30px;
+    background-color: #c3d3ad;
 }
 
 .hamburger-menu.active {
-    left: 0;
+    right: 10px;
 }
-
-.hamburger-item {
-    margin: 2.5rem 0;
-}
-
-.hamburger-button.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #contactUsButton {
     float: right;
@@ -310,6 +329,7 @@
 
 .articles-bar {
     background-color: #87a260;
+    z-index: 1;
 }
 
 #articles-body {
@@ -324,7 +344,6 @@
 .articlePanels-container {
     display: flex;
     justify-content: space-around;
-    /* flex-wrap: wrap; */
     width: 95%;
     padding: 10px;
 }
@@ -364,7 +383,7 @@
 /* CSS for ecoChat.html */
 
 .ecoChat-bar {
-    background-color: #76bda9;
+    background-color: #87a260;
 }
 
 #ecoChat-box {
@@ -379,43 +398,103 @@
     border-radius: 50px;
 }
 
-#ecoChat-icon {
-    padding: 10px;
-    background-color: #4e4e4e;
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    margin-top: 25px;
-    margin-left: 25px;
-    align-self: flex-start;
-}
-
-.ecoChat-textbox {
+#ecoChat-textbox {
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
-    background-color: #E1E1E1;
     padding: 10px;
-    height: 500px;
+    height: 350px;
     border-radius: 20px;
     margin-top: 30px;
     margin-bottom: 20px;
-    width: 90%;
+    width: 95%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-.ecoChat-inputbox {
+#ecoChat-inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    overflow: hidden;
+}
+
+#ecoChat-inputbox {
     padding: 10px;
     border-radius: 12.5px;
     margin-bottom: 20px;
-    width: 75%;
+    width: 80%;
     background-color: #E1E1E1;
     border: none;
     outline: none;
 }
 
-td.top
-{
-   vertical-align: top;
+.ecoChat-replyIcon {
+    position: relative;
+    top: 4px;
+    right: 50px;
+    width: 25px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ecoChat-replyIcon:hover {
+    width: 27px;
+    -webkit-filter: drop-shadow(0px 0px 3px grey);
+    filter: drop-shadow(0px 0px 3px grey);
+}
+
+#ecoChat-inputButton {
+    color: #d2d2d2;
+}
+
+.botIcon {
+    display: flex;
+    align-self: flex-start;
+    padding: 10px;
+    background-color: #808080;
+    border-radius: 100%;
+    margin: 5px;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.botReply {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 45%;
+    word-wrap: break-word;
+    background-color: #d2d2d2;
+}
+
+.userIcon {
+    display: flex;
+    align-self: flex-end;
+    padding: 10px;
+    background-color: #808080;
+    border-radius: 100%;
+    margin: 5px;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.userReply {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 45%;
+    word-wrap: break-word;
+    background-color: #d2d2d2;
 }
 
 /* CSS for articles-archive.html */
@@ -442,14 +521,108 @@ td.top
     font-family: 'Arial Rounded MT', sans-serif;
     color: #2a2920;
     background-color: #d2d2d2;
+    z-index: 0;
+
+    filter: drop-shadow(0px 0px 0px grey);
+}
+
+.articlesArchive-thumbnail {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.articlesArchive-article:hover {
+    -webkit-filter: drop-shadow(0px 0px 3px grey);
+    filter: drop-shadow(0px 0px 3px grey);
+}
+
+.articlesArchive-text {
+    width: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-filter: drop-shadow(0px 0px 3px black);
+    filter: drop-shadow(0px 0px 3px black);
 }
 
 .articlesArchive-article-name {
     font-size: 20px;
+    color: white;
 }
 
 .articlesArchive-article-info {
     font-size: 12px;
+    color: white;
+}
+
+/* CSS for articles */
+
+.article-main-content {
+    margin-top: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-title {
+    font-size: 45px;
+    font-family: 'Bahnschrift', 'sans-serif';
+    width: 80%;
+    color: rgb(58, 58, 58);
+}
+
+.article-subtitle {
+    font-size: 23px;
+    font-family: 'Bahnschrift', 'sans-serif';
+    width: 80%;
+    color: rgb(58, 58, 58);
+    position: relative;
+    bottom: 30px;
+}
+
+.article-top {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+}
+
+.article-top-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.article-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+}
+
+.article-text {
+    font-size: 20px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    width: 100%;
+}
+
+.article-list {
+    font-size: 20px;
+    font-family: 'Arial Rounded MT', sans-serif;
+}
+
+.article-text-title {
+    font-size: 23px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    text-decoration: underline;
+}
+
+.article-image {
+    width: 50%;
+    margin: 20px;
+    object-fit: contain;
 }
 
 /*.archives-search {
