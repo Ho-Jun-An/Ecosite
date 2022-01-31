@@ -36,7 +36,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .main-title {
@@ -339,6 +339,7 @@
 
 .articles-bar {
     background-color: #87a260;
+    z-index: 1;
 }
 
 #articles-body {
@@ -530,14 +531,108 @@
     font-family: 'Arial Rounded MT', sans-serif;
     color: #2a2920;
     background-color: #d2d2d2;
+    z-index: 0;
+
+    filter: drop-shadow(0px 0px 0px grey);
+}
+
+.articlesArchive-thumbnail {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.articlesArchive-article:hover {
+    -webkit-filter: drop-shadow(0px 0px 3px grey);
+    filter: drop-shadow(0px 0px 3px grey);
+}
+
+.articlesArchive-text {
+    width: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-filter: drop-shadow(0px 0px 3px black);
+    filter: drop-shadow(0px 0px 3px black);
 }
 
 .articlesArchive-article-name {
     font-size: 20px;
+    color: white;
 }
 
 .articlesArchive-article-info {
     font-size: 12px;
+    color: white;
+}
+
+/* CSS for articles */
+
+.article-main-content {
+    margin-top: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-title {
+    font-size: 45px;
+    font-family: 'Bahnschrift', 'sans-serif';
+    width: 80%;
+    color: rgb(58, 58, 58);
+}
+
+.article-subtitle {
+    font-size: 23px;
+    font-family: 'Bahnschrift', 'sans-serif';
+    width: 80%;
+    color: rgb(58, 58, 58);
+    position: relative;
+    bottom: 30px;
+}
+
+.article-top {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+}
+
+.article-top-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.article-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+}
+
+.article-text {
+    font-size: 20px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    width: 100%;
+}
+
+.article-list {
+    font-size: 20px;
+    font-family: 'Arial Rounded MT', sans-serif;
+}
+
+.article-text-title {
+    font-size: 23px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    text-decoration: underline;
+}
+
+.article-image {
+    width: 50%;
+    margin: 20px;
+    object-fit: contain;
 }
 
 /*.archives-search {
