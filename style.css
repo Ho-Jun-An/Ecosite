@@ -645,6 +645,11 @@
     bottom: 30px;
 }
 
+.article-subtitle:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px grey);
+    filter: drop-shadow(0px 0px 5px grey);
+}
+
 .article-top {
     display: flex;
     justify-content: center;
@@ -767,4 +772,41 @@
 #newsletter-popup-submit-button:hover {
     -webkit-filter: drop-shadow(0px 0px 5px grey);
     filter: drop-shadow(0px 0px 5px grey);
+}
+
+/* CSS for our authors */
+
+#our-authors-container {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.author-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.author-image {
+    padding: 100px;
+    background-color: #d2d2d2;
+    border-radius: 50%;
+}
+
+.author-title {
+    font-size: 30px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    text-align: center;
+}
+
+.author-info {
+    font-size: 25px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    text-align: center;
+    position: relative;
+    bottom: 30px;
 }
