@@ -613,6 +613,13 @@
     font-size: 30px;
 }
 
+#search-results-no-results {
+    font-family: 'Arial Rounded MT', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #444444;
+}
+
 /* CSS for articles */
 
 .article-main-content {

@@ -51,12 +51,20 @@ function output(input)
 function displayResults(product) 
 {
   const resultsDiv = document.getElementById("archive-search-results");
-  const resultsContainer = document.getElementById("archive-results-container");
 
-  // Display search bar, title and archive-results-container
+  // Clear archive-search-results
+  resultsDiv.innerHTML = "";
+
+  // Display title and archive-results-container
   var tempTitleDiv = document.createElement('div');
   tempTitleDiv.innerHTML = "<h1 id=\"search-results-title\">Search Results:</h1>";
-  resultsDiv.prepend(tempTitleDiv.firstChild);
+  resultsDiv.append(tempTitleDiv.firstChild);
+
+  var tempContainerDiv = document.createElement('div');
+  tempContainerDiv.innerHTML = "<div id=\"archive-results-container\" class=\"article-archives-list\"></div>";
+  resultsDiv.append(tempContainerDiv.firstChild);
+
+  const resultsContainer = document.getElementById("archive-results-container");
 
   // Display articles
   for (a = 0; a < product.length; a++) {
@@ -102,7 +110,7 @@ const reply =
   "</button>"
 ];
 
-const noResults = ["<button class=\"articleList-article\"> <span class=\"articleList-name\">No Results</span> <br> </button>"]
+const noResults = ["<h1 id=\"search-results-no-results\">No Results</h1>"]
 
 function compare(triggerArray, replyArray, textWords) 
 {
