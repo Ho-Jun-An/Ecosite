@@ -36,7 +36,7 @@
 
     <section class="main-content articles-main-content">
         <nav class="articlePanels-container">
-            <button class="articlePanel articlePanel-other" onclick="window.location.href='#'">
+            <button id="article-panel-newsletter" class="articlePanel articlePanel-other">
                 <span class="articlePanel-title">Sign up to the newsletter.</span> <br>
                 <span class="articlePanel-description">Be the ones to recieve our monthly articles first and coupons as well!</span>
             </button>
@@ -55,7 +55,16 @@
             </button>
         </nav>
     </section>
+
+    <section id="newsletter-popup-container">
+        <button id="newsletter-popup-close-button">X</button>
+        <h1 id="newsletter-popup-title">Articles and latest news on Sustainability | monthly discount coupons to sustainable businesses</h1>
+        <h2 id="newsletter-popup-description">Sign up for out monthly newsletters to receive our articles earlier!</h2>
+        <input id="newsletter-popup-input" type="text" placeholder="Enter your email here" autocomplete="off" />
+        <button id="newsletter-popup-submit-button">Submit</button>
+    </section>
 </body>
 </html>
 
 <script type="text/javascript" src="hamburgerJS.js"></script>
+<script type="text/javascript" src="newsletter-popup.js"></script>
