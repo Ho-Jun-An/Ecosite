@@ -5,7 +5,7 @@
 // EventListener responds when a key is pressed.
 document.addEventListener("DOMContentLoaded", () => 
 {
-  const resultsDiv = document.getElementById("archive-results-container");
+  const resultsDiv = document.getElementById("archive-search-results");
   const inputField = document.getElementById("search-article");
 
   // Detect keypresses for inputField.
@@ -51,12 +51,20 @@ function output(input)
 function displayResults(product) 
 {
   const resultsDiv = document.getElementById("archive-search-results");
-  const resultsContainer = document.getElementById("archive-results-container");
 
-  // Display search bar, title and archive-results-container
+  // Clear archive-search-results
+  resultsDiv.innerHTML = "";
+
+  // Display title and archive-results-container
   var tempTitleDiv = document.createElement('div');
   tempTitleDiv.innerHTML = "<h1 id=\"search-results-title\">Search Results:</h1>";
-  resultsDiv.prepend(tempTitleDiv.firstChild);
+  resultsDiv.append(tempTitleDiv.firstChild);
+
+  var tempContainerDiv = document.createElement('div');
+  tempContainerDiv.innerHTML = "<div id=\"archive-results-container\" class=\"article-archives-list\"></div>";
+  resultsDiv.append(tempContainerDiv.firstChild);
+
+  const resultsContainer = document.getElementById("archive-results-container");
 
   // Display articles
   for (a = 0; a < product.length; a++) {
@@ -76,9 +84,13 @@ function displayResults(product)
 // do something.
 const trigger = 
 [ 
-  ["what", "we", "can", "do", "to", "live", "more", "sustainable", "lives"],  
+  ["fast", "fashion", "an", "epidemic", "thaanya", "rajeshkanna", "ethan", "han", "vanessa", "wong"],
+
+  ["sustainability", "in", "our", "generation", "why", "is", "it", "important", "thaanya", "rajeshkanna", "ethan", "han", "vanessa", "wong"],
+
+  ["what", "we", "can", "do", "to", "live", "more", "sustainable", "lives", "ethan", "han"],  
   
-  ["what", "ways", "has", "Singapore", "committed", "to", "creating", "a", "more", "sustainable", "country"],
+  ["what", "ways", "has", "Singapore", "committed", "to", "creating", "a", "more", "sustainable", "country", "ethan", "han"],
 ];
 
 // That something would be to reply with the word or phrase
@@ -86,23 +98,39 @@ const trigger =
 const reply = 
 [
   "<button class=\"articlesArchive-article\" onclick=\"window.location.href='articles/article1.html'\">" +
-  "<img class=\"articlesArchive-thumbnail\" src=\"articles/article-images/article1.png\">" +
-  "<section class=\"articlesArchive-text\">" +
-      "<span class=\"articlesArchive-article-name\">What we can do to live more sustainable lives</span> <br>" +
-      "<span class=\"articlesArchive-article-info\">By ???, 31/1/2022</span>" +
-  "</section>" +
+                "<img class=\"articlesArchive-thumbnail\" src=\"articles/article-images/article1.jpg\">" +
+                "<section class=\"articlesArchive-text\">" +
+                    "<span class=\"articlesArchive-article-name\">Fast Fashion: An epidemic</span> <br>" +
+                    "<span class=\"articlesArchive-article-info\">By Thaanya Rajeshkanna, Ethan Han and Vanessa Wong, 31/1/2022</span>" +
+                "</section>" +
   "</button>",
 
   "<button class=\"articlesArchive-article\" onclick=\"window.location.href='articles/article2.html'\">" +
-  "<img class=\"articlesArchive-thumbnail\" src=\"articles/article-images/article2.jpg\">" +
-  "<section class=\"articlesArchive-text\">" +
-      "<span class=\"articlesArchive-article-name\">What ways has Singapore committed to creating a more sustainable country</span> <br>" +
-      "<span class=\"articlesArchive-article-info\">By ???, 31/1/2022</span>" +
-  "</section>" +
+                "<img class=\"articlesArchive-thumbnail\" src=\"articles/article-images/article2.jpg\">" +
+                "<section class=\"articlesArchive-text\">" +
+                    "<span class=\"articlesArchive-article-name\">Sustainability in our generation: why is it important?</span> <br>" +
+                    "<span class=\"articlesArchive-article-info\">By Thaanya Rajeshkanna, Ethan Han and Vanessa Wong, 31/1/2022</span>" +
+                "</section>" +
+  "</button>",
+
+  "<button class=\"articlesArchive-article\" onclick=\"window.location.href='articles/article3.html'\">" +
+                "<img class=\"articlesArchive-thumbnail\" src=\"articles/article-images/article3.png\">" +
+                "<section class=\"articlesArchive-text\">" +
+                    "<span class=\"articlesArchive-article-name\">What we can do to live more sustainable lives</span> <br>" +
+                    "<span class=\"articlesArchive-article-info\">By Ethan Han, 31/1/2022</span>" +
+                "</section>" +
+  "</button>",
+
+  "<button class=\"articlesArchive-article\" onclick=\"window.location.href='articles/article4.html'\">" +
+                "<img class=\"articlesArchive-thumbnail\" src=\"articles/article-images/article4.jpg\">" +
+                "<section class=\"articlesArchive-text\">" +
+                    "<span class=\"articlesArchive-article-name\">What ways has Singapore committed to creating a more sustainable country</span> <br>" +
+                    "<span class=\"articlesArchive-article-info\">By Ethan Han, 31/1/2022</span>" +
+                "</section>" +
   "</button>"
 ];
 
-const noResults = ["<button class=\"articleList-article\"> <span class=\"articleList-name\">No Results</span> <br> </button>"]
+const noResults = ["<h1 id=\"search-results-no-results\">No Results</h1>"]
 
 function compare(triggerArray, replyArray, textWords) 
 {
