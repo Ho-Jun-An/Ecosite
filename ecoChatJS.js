@@ -177,6 +177,9 @@ const trigger =
 
   //6
   ["help", "assistance"]
+
+  //7
+
 ];
 
 // That something would be to reply with the word or phrase
@@ -231,6 +234,9 @@ const reply =
 
   //6
   ["You can type in: unsustainable, non environmentally friendly, shein, victorias secret, mango, sustainable, eco friendly, environmentally friendly, alternative choices, alternate choices, alternative options, alternate options, levis, uniqlo, zalora, why, reason"]
+
+  //7
+  
 ];
 
 // If the bot didn't use any of the triggers, it can use

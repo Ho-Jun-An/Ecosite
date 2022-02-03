@@ -18,3 +18,5 @@ GO
 --(
 -- CONSTRAINT PK_*T* PRIMARY KEY NONCLUSTERED (*PK*),
 --)
+
+-- Did we even use this?
